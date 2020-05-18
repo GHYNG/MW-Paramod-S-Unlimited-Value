@@ -1,0 +1,72 @@
+# MW Mod for defense platforms
+# Start Version 2.6
+
+# defense platforms
+
+tech_space_defense_station_2 = {
+	cost = @tier2cost1
+	tier = 2
+	area = engineering
+	start_tech = no
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_1" }
+	# icon = "gfx/interface/icons/technologies/old_tech_icons/tech_space_defense_station_2.dds"
+	modifier = {
+		starbase_defense_platform_capacity_add = 2
+	}
+}
+
+tech_space_defense_station_3 = {
+	cost = @tier3cost1
+	tier = 3
+	area = engineering
+	start_tech = no
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_2" }
+	# icon = "gfx/interface/icons/technologies/old_tech_icons/tech_space_defense_station_3.dds"
+	modifier = {
+		starbase_defense_platform_capacity_add = 4
+	}
+}
+
+# defense hulls
+
+tech_defense_platform_hull_1 = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_1" }
+	is_rare = yes
+	weight = @tier2weight2
+	modifier = {
+		shipsize_military_station_small_hull_add = 500
+		
+	}
+}
+
+tech_defense_platform_hull_2 = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_2" }
+	is_rare = yes
+	weight = @tier3weight2
+	modifier = {
+		shipsize_military_station_medium_hull_add = 1000
+	}
+}
+
+tech_defense_platform_hull_3 = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_3" }
+	is_rare = yes
+	weight = @tier4weight2
+	modifier = {
+		shipsize_military_station_large_hull_add = 2000
+	}
+}
