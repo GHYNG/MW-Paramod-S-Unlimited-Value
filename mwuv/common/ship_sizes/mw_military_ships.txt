@@ -1,9 +1,11 @@
 # Milkyway Mod Unlimited
-# Unlimited number of titans
-# ship resize
+# Since Version Game 2.2 Mod 1
+# Last Modified Version Game 2.7 Mod 1.9
 # updated for 2.7
 
 # medium and large defanse platform require technology
+# ship resize
+# titan building limit removal
 
 #reloadable with 'reload stats'
 # This file is where you start when you want to configure something new, then go to sections
@@ -309,130 +311,4 @@ titan = {
 	min_upgrade_cost = {
 		alloys = 16
 	}
-}
-
-
-################
-# MILITARY STATIONS #
-################
-
-military_station_small = {
-	max_speed = 6
-	rotation_speed = 10
-	acceleration = 10
-	max_hitpoints = 1000
-	modifier = {
-		ship_evasion_mult = -1
-		ships_upkeep_mult = -0.25
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-	}	
-	combat_size_multiplier = 2
-	size_multiplier = 1
-	fleet_slot_size = 2
-	section_slots = { 
-		"west" = { locator = "part1" }
-		"east" = { locator = "part2" }
-	}
-	is_designable = yes
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes
-	num_target_locators = 0
-	is_space_station = yes
-	base_buildtime = 120
-	
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_space_defense_station_1" }
-	class = shipclass_military_station
-	construction_type = starbase_defenses
-	
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-	
-	build_block_radius = @build_block_radius_military
-}
-
-military_station_medium = {
-	max_speed = 6
-	rotation_speed = 10
-	acceleration = 10
-	modifier = {
-		ship_evasion_mult = -1
-		ships_upkeep_mult = -0.25
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20	
-	}
-	max_hitpoints = 2000
-	size_multiplier = 2
-	fleet_slot_size = 4
-	section_slots = { 
-		"north" = { locator = "part1" }
-		"west" = { locator = "part2" }
-		"east" = { locator = "part3" }
-		"south" = { locator = "part4" }
-	}
-	num_target_locators = 0
-	is_space_station = yes	
-	base_buildtime = 240
-	is_listed = yes
-	is_designable = yes
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes	
-	
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_space_defense_station_2" }
-	class = shipclass_military_station
-	construction_type = starbase_defenses
-	
-	required_component_set = "power_core"
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-	
-	build_block_radius = @build_block_radius_military
-}
-
-military_station_large = {
-	max_speed = 6
-	rotation_speed = 10
-	acceleration = 10
-	modifier = {
-		ship_evasion_mult = -1
-		ships_upkeep_mult = -0.25
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20	
-	}
-	max_hitpoints = 4000
-	size_multiplier = 4
-	fleet_slot_size = 8
-	section_slots = { 
-		"north" = { locator = "part1" locator = "part2" }
-		"west" = { locator = "part3" locator = "part4" }
-		"east" = { locator = "part5" locator = "part6" }
-		"south" = { locator = "part7" locator = "part8" }
-	}
-	num_target_locators = 0
-	is_space_station = yes
-	base_buildtime = 480
-	is_designable = yes
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes	
-	
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_space_defense_station_3" }
-	class = shipclass_military_station
-	construction_type = starbase_defenses
-	
-	required_component_set = "power_core"
-	required_component_set = "power_core"
-	required_component_set = "power_core"
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-	
-	build_block_radius = @build_block_radius_military
 }
