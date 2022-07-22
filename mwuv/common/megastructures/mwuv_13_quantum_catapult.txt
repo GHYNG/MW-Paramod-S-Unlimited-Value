@@ -1,0 +1,161 @@
+# Quantum Catapult
+quantum_catapult_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 300
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	prerequisites = { "tech_quantum_catapult" "tech_mega_engineering" }
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			has_no_non_gate_megastructure = yes
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+#		custom_tooltip = {
+#			fail_text = "requires_no_existing_quantum_catapult"
+#			from = { NOT = { has_country_flag = built_quantum_catapult_site } }
+#		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_neutron_star_or_pulsar"
+				is_star = yes
+				if = {
+					limit = {
+						is_trinary_star = no
+						is_binary_star = no
+					}
+					OR = {
+						is_star_class = sc_neutron_star
+						is_star_class = sc_pulsar
+					}
+				}
+				else = {
+					OR = {
+						is_planet_class = pc_neutron_star
+						is_planet_class = pc_pulsar
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_megastructure = quantum_catapult_0
+					has_megastructure = quantum_catapult_1
+					has_megastructure = quantum_catapult_2
+					has_megastructure = quantum_catapult_3
+					has_megastructure = quantum_catapult_4
+					has_megastructure = quantum_catapult_ruined
+					has_megastructure = quantum_catapult_restored
+					has_megastructure = quantum_catapult_ruined_slingshot
+					has_megastructure = quantum_catapult_restored_slingshot
+					has_megastructure = quantum_catapult_improved_slingshot
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.1
+			has_any_megastructure = yes
+		}
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		from = {
+			set_country_flag = built_quantum_catapult_site
+			country_event = { id = tutorial.2126 }
+		}
+		fromfrom.planet = {
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+		fromfrom.planet = {
+			set_planet_flag = has_megastructure
+		}
+	}
+}

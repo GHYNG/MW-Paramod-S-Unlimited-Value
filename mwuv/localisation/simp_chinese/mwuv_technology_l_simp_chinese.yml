@@ -1,0 +1,35 @@
+﻿l_simp_chinese:
+ 
+ # titan build speed
+ tech_titan_build_speed:0 "标准化泰坦模板"
+ tech_titan_build_speed_desc:0 "建立新的泰坦模板和建造标准将会大大提高生产线的效率。"
+ 
+ 
+ 
+ # defense platform hulls
+ 
+ ## small
+ tech_defense_platform_1_hull_1:0 "改进小型防御平台船体"
+ tech_defense_platform_1_hull_1_desc:0 "建造技术的进步将使得我们能够进行更坚固更耐用的小型防御平台的建造。"
+ tech_defense_platform_1_hull_2:0 "先进小型防御平台船体"
+ tech_defense_platform_1_hull_2_desc:0 "最新一代的小型防御平台优化了结构的整体性并改进了舱壁。"
+ 
+ #medium
+ tech_defense_platform_2_hull_1:0 "改进中型防御平台船体"
+ tech_defense_platform_2_hull_1_desc:0 "建造技术的进步将使得我们能够进行更坚固更耐用的中型防御平台的建造。"
+ tech_defense_platform_2_hull_2:0 "先进中型防御平台船体"
+ tech_defense_platform_2_hull_2_desc:0 "最新一代的中型防御平台优化了结构的整体性并改进了舱壁。"
+ 
+ #large
+ tech_defense_platform_3_hull_1:0 "改进大型防御平台船体"
+ tech_defense_platform_3_hull_1_desc:0 "建造技术的进步将使得我们能够进行更坚固更耐用的大型防御平台的建造。"
+ tech_defense_platform_3_hull_2:0 "先进大型防御平台船体"
+ tech_defense_platform_3_hull_2_desc:0 "最新一代的大型防御平台优化了结构的整体性并改进了舱壁。"
+ 
+ 
+ 
+ # t1, t2, t3, t4 ships
+ tech_corvette_hull_effect:0 "$mod_shipsize_corvette_hull_add$：§G+250§!"
+ tech_destroyer_hull_effect:0 "$mod_shipsize_destroyer_hull_add$：§G+500§!"
+ tech_cruiser_hull_effect:0 "$mod_shipsize_cruiser_hull_add$：§G+1000§!"
+ tech_battleship_hull_effect:0 "$mod_shipsize_battleship_hull_add$：§G+2000§!"

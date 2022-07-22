@@ -1,0 +1,4844 @@
+# MWUV tier rewrite
+# supports tiers up to 255
+# since version game 3.4 mod 1.11 (2022/07/21)
+
+####
+#	Technology tiers
+#
+#	weight_modifier = {
+#		factor = 1
+#		modifier = {
+#			add = 10
+#			OR = {
+#				has_government = "military_dictatorship"
+#				has_government = "martial_empire"
+#			}
+#		}
+#	}
+####
+
+# The previously_unlocked-value decides how many techs in the previous tier has to be researched before the tier is unlocked
+
+0 = { # Tier 0
+}
+1 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 3
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+2 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 4
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+3 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 5
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+4 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 6
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+5 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 7
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+6 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 8
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+7 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 9
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+8 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 10
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+9 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 11
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+10 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 12
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+11 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 13
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+12 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 14
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+13 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 15
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+14 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 16
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+15 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 17
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+16 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 18
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+17 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 19
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+18 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 20
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+19 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 21
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+20 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 22
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+21 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 23
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+22 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 24
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+23 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 25
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+24 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 26
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+25 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 27
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+26 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 28
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+27 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 29
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+28 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 30
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+29 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 31
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+30 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 32
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+31 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 33
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+32 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 34
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+33 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 35
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+34 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 36
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+35 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 37
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+36 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 38
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+37 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 39
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+38 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 40
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+39 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 41
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+40 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 42
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+41 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 43
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+42 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 44
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+43 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 45
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+44 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 46
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+45 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 47
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+46 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 48
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+47 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 49
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+48 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 50
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+49 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 51
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+50 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 52
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+51 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 53
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+52 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 54
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+53 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 55
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+54 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 56
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+55 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 57
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+56 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 58
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+57 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 59
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+58 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 60
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+59 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 61
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+60 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 62
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+61 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 63
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+62 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 64
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+63 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 65
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+64 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 66
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+65 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 67
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+66 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 68
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+67 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 69
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+68 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 70
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+69 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 71
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+70 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 72
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+71 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 73
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+72 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 74
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+73 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 75
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+74 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 76
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+75 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 77
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+76 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 78
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+77 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 79
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+78 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 80
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+79 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 81
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+80 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 82
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+81 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 83
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+82 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 84
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+83 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 85
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+84 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 86
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+85 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 87
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+86 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 88
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+87 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 89
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+88 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 90
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+89 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 91
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+90 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 92
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+91 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 93
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+92 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 94
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+93 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 95
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+94 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 96
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+95 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 97
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+96 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 98
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+97 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 99
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+98 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 100
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+99 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 101
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+100 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 102
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+101 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 103
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+102 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 104
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+103 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 105
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+104 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 106
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+105 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 107
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+106 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 108
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+107 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 109
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+108 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 110
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+109 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 111
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+110 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 112
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+111 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 113
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+112 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 114
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+113 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 115
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+114 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 116
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+115 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 117
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+116 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 118
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+117 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 119
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+118 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 120
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+119 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 121
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+120 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 122
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+121 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 123
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+122 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 124
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+123 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 125
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+124 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 126
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+125 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 127
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+126 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 128
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+127 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 129
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+128 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 130
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+129 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 131
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+130 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 132
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+131 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 133
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+132 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 134
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+133 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 135
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+134 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 136
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+135 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 137
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+136 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 138
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+137 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 139
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+138 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 140
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+139 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 141
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+140 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 142
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+141 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 143
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+142 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 144
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+143 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 145
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+144 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 146
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+145 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 147
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+146 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 148
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+147 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 149
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+148 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 150
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+149 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 151
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+150 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 152
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+151 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 153
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+152 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 154
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+153 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 155
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+154 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 156
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+155 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 157
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+156 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 158
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+157 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 159
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+158 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 160
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+159 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 161
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+160 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 162
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+161 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 163
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+162 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 164
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+163 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 165
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+164 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 166
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+165 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 167
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+166 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 168
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+167 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 169
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+168 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 170
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+169 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 171
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+170 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 172
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+171 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 173
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+172 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 174
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+173 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 175
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+174 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 176
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+175 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 177
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+176 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 178
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+177 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 179
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+178 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 180
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+179 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 181
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+180 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 182
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+181 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 183
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+182 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 184
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+183 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 185
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+184 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 186
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+185 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 187
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+186 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 188
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+187 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 189
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+188 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 190
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+189 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 191
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+190 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 192
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+191 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 193
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+192 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 194
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+193 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 195
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+194 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 196
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+195 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 197
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+196 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 198
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+197 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 199
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+198 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 200
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+199 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 201
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+200 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 202
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+201 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 203
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+202 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 204
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+203 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 205
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+204 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 206
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+205 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 207
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+206 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 208
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+207 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 209
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+208 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 210
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+209 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 211
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+210 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 212
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+211 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 213
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+212 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 214
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+213 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 215
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+214 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 216
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+215 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 217
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+216 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 218
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+217 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 219
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+218 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 220
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+219 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 221
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+220 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 222
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+221 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 223
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+222 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 224
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+223 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 225
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+224 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 226
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+225 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 227
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+226 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 228
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+227 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 229
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+228 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 230
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+229 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 231
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+230 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 232
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+231 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 233
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+232 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 234
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+233 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 235
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+234 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 236
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+235 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 237
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+236 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 238
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+237 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 239
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+238 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 240
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+239 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 241
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+240 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 242
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+241 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 243
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+242 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 244
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+243 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 245
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+244 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 246
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+245 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 247
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+246 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 248
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+247 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 249
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+248 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 250
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+249 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 251
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+250 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 252
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+251 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 253
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+252 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 254
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+253 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_researched_techs_of_tier
+			parameters = {
+				tier = 255
+			}
+			mode = add
+			mult = 0.2
+		}
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+254 = {
+	previously_unlocked = 6
+	weight_modifier = {
+		base = 1
+		complex_trigger_modifier = {
+			trigger = num_repeatable_techs
+			mode = add
+			mult = 0.2
+		}
+	}
+}
+255 = {
+	previously_unlocked = 6
+}

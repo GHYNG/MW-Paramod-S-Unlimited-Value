@@ -1,0 +1,34 @@
+﻿l_simp_chinese:
+
+
+ 
+ # titan build speed
+ tech_titan_build_speed:0 "Standardized Titan Patterns"
+ tech_titan_build_speed_desc:0 "Establishing new standards for how we design and construct massive titans greatly improves the speed at which they can be assembled."
+ 
+ 
+ 
+ # defense platform hulls
+ 
+ ## small
+ tech_defense_platform_1_hull_1:0 "Improved Small Defense Platform Hulls"
+ tech_defense_platform_1_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable small defense platforms."
+ tech_defense_platform_1_hull_2:0 "Advanced Small Defense Platform Hulls"
+ tech_defense_platform_1_hull_2_desc:0 "The latest generation of small defense platform hulls have optimized structural integrity fields and improved bulkheads."
+ 
+ #medium
+ tech_defense_platform_2_hull_1:0 "Improved Medium Defense Platform Hulls"
+ tech_defense_platform_2_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable medium defense platforms."
+ tech_defense_platform_2_hull_2:0 "Advanced Medium Defense Platform Hulls"
+ tech_defense_platform_2_hull_2_desc:0 "The latest generation of medium defense platform hulls have optimized structural integrity fields and improved bulkheads."
+ 
+ #large
+ tech_defense_platform_3_hull_1:0 "Improved Large Defense Platform Hulls"
+ tech_defense_platform_3_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable large defense platforms."
+ tech_defense_platform_3_hull_2:0 "Advanced Large Defense Platform Hulls"
+ tech_defense_platform_3_hull_2_desc:0 "The latest generation of large defense platform hulls have optimized structural integrity fields and improved bulkheads."
+ 
+ 
+ 
+ # t1, t2, t3, t4 ship revalue
+ 

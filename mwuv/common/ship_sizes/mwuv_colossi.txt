@@ -17,13 +17,15 @@ colossus = {
 	section_slots = { "ship" = { locator = "frame_ship" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon_frame = 7
+	icon = ship_size_military_32
 	base_buildtime = @colossus_build_time
 	can_have_federation_design = yes
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	selectable = { host_has_dlc = "Apocalypse" }
+
 	prerequisites = { "tech_colossus" }
-	
+
 	class = shipclass_military_special
 	construction_type = starbase_shipyard
 	required_component_set = "power_core"
@@ -93,4 +95,11 @@ colossus = {
 	min_upgrade_cost = {
 		alloys = 10
 	}
+
+	ai_ship_data = {
+		min = 1
+		system_mult = 0.01
+		max = 100
+	}
 }
+
