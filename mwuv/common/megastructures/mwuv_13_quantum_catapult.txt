@@ -123,7 +123,6 @@ quantum_catapult_0 = {
 					has_megastructure = quantum_catapult_1
 					has_megastructure = quantum_catapult_2
 					has_megastructure = quantum_catapult_3
-					has_megastructure = quantum_catapult_4
 					has_megastructure = quantum_catapult_ruined
 					has_megastructure = quantum_catapult_restored
 					has_megastructure = quantum_catapult_ruined_slingshot

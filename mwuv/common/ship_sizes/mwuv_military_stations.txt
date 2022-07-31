@@ -48,11 +48,11 @@ military_station_small = {
 		category = ships
 	}
 	
-	ai_ship_data = {
-		min = 4
-		planet_mult = 4
-		system_mult = 1
-	}
+	# ai_ship_data = {
+	# 	min = 4
+	#	planet_mult = 4
+	#	system_mult = 1
+	# }
 }
 
 military_station_medium = {
@@ -100,11 +100,11 @@ military_station_medium = {
 		category = ships
 	}
 	
-	ai_ship_data = {
-		min = 2
-		planet_mult = 2
-		system_mult = 0.5
-	}
+	# ai_ship_data = {
+	# 	min = 2
+	#	planet_mult = 2
+	#	system_mult = 0.5
+	# }
 }
 
 military_station_large = {
@@ -153,9 +153,9 @@ military_station_large = {
 		category = ships
 	}
 	
-	ai_ship_data = {
-		min = 1
-		planet_mult = 1
-		system_mult = 0.25
-	}
+	# ai_ship_data = {
+	#	min = 1
+	#	planet_mult = 1
+	#	system_mult = 0.25
+	# }
 }

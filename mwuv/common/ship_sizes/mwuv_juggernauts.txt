@@ -110,8 +110,12 @@ juggernaut = {
 	}
 
 	ai_ship_data = {
-		min = 1
-		planet_mult = 0.01
-		max = 100
+		fraction = {
+			base = 0
+			modifier = {
+				add = 5
+				uses_standard_ship_sizes = yes
+			}
+		}
 	}
 }

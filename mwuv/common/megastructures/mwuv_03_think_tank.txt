@@ -139,7 +139,7 @@ think_tank_0 = {
 		modifier = {
 			factor = 0.1
 			from = {
-				OR {
+				OR =  {
 					has_megastructure = think_tank_0
 					has_megastructure = think_tank_1
 					has_megastructure = think_tank_2
