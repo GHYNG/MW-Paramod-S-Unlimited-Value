@@ -1,0 +1,74 @@
+mwuv_interstellar_assembly_opinion_value_1 = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				is_megastructure_type = interstellar_assembly_1
+			}
+		}
+		mult = 10
+	}
+}
+
+mwuv_interstellar_assembly_opinion_value_2 = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				is_megastructure_type = interstellar_assembly_2
+			}
+		}
+		mult = 20
+	}
+}
+
+mwuv_interstellar_assembly_opinion_value_3 = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				is_megastructure_type = interstellar_assembly_3
+			}
+		}
+		mult = 30
+	}
+}
+
+mwuv_interstellar_assembly_opinion_value_4 = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				is_megastructure_type = interstellar_assembly_4
+			}
+		}
+		mult = 50
+	}
+}
+
+mwuv_interstellar_assembly_opinion_value_restored = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				is_megastructure_type = interstellar_assembly_restored
+			}
+		}
+		mult = 50
+	}
+}
