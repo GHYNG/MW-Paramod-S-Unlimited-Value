@@ -1,16 +1,26 @@
 # mw unlimited values
 # this is for unlocking military stations
 
+# Last Updated for Game 3.6 Mod 1.12
 
-################
+
+#####################
 # MILITARY STATIONS #
-################
+#####################
+
+@station_small_hp = 3000
+@station_medium_hp = 6000
+@station_large_hp = 12000
+
+@station_small_build_time = 60
+@station_medium_build_time = 120
+@station_large_build_time = 240
 
 military_station_small = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
-	max_hitpoints = 2000
+	max_hitpoints = @station_small_hp
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
@@ -31,7 +41,9 @@ military_station_small = {
 	takes_name_from_ship_design = yes
 	num_target_locators = 0
 	is_space_station = yes
-	base_buildtime = @corvette_build_time
+	base_buildtime = @station_small_build_time
+
+	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
 	
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_1" }
@@ -43,6 +55,14 @@ military_station_small = {
 	required_component_set = "combat_computers"
 	
 	build_block_radius = @build_block_radius_military
+
+	potential_construction = {
+		is_scope_type = starbase
+		OR = {
+			has_starbase_size >= starbase_outpost
+			has_starbase_size >= orbital_ring_tier_1
+		}
+	}
 
 	resources = {
 		category = ships
@@ -67,7 +87,7 @@ military_station_medium = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30	
 	}
-	max_hitpoints = 4000
+	max_hitpoints = @station_medium_hp
 	size_multiplier = 2
 	fleet_slot_size = 4
 	section_slots = { 
@@ -76,13 +96,14 @@ military_station_medium = {
 		"east" = { locator = "part3" }
 		"south" = { locator = "part4" }
 	}
-	num_target_locators = 0
-	is_space_station = yes	
-	base_buildtime = @destroyer_build_time
-	is_listed = yes
 	is_designable = yes
 	uses_name_prefix = no
-	takes_name_from_ship_design = yes	
+	takes_name_from_ship_design = yes
+	num_target_locators = 0
+	is_space_station = yes
+	base_buildtime = @station_medium_build_time
+
+	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
 	
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_2" }
@@ -95,6 +116,14 @@ military_station_medium = {
 	required_component_set = "combat_computers"
 	
 	build_block_radius = @build_block_radius_military
+
+	potential_construction = {
+		is_scope_type = starbase
+		OR = {
+			has_starbase_size >= starbase_starport
+			has_starbase_size >= orbital_ring_tier_2
+		}
+	}
 
 	resources = {
 		category = ships
@@ -119,7 +148,7 @@ military_station_large = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30	
 	}
-	max_hitpoints = 8000
+	max_hitpoints = @station_large_hp
 	size_multiplier = 4
 	fleet_slot_size = 8
 	section_slots = { 
@@ -128,12 +157,14 @@ military_station_large = {
 		"east" = { locator = "part5" locator = "part6" }
 		"south" = { locator = "part7" locator = "part8" }
 	}
-	num_target_locators = 0
-	is_space_station = yes
-	base_buildtime = @cruiser_build_time
 	is_designable = yes
 	uses_name_prefix = no
-	takes_name_from_ship_design = yes	
+	takes_name_from_ship_design = yes
+	num_target_locators = 0
+	is_space_station = yes
+	base_buildtime = @station_large_build_time
+
+	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
 	
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_3" }
@@ -148,6 +179,14 @@ military_station_large = {
 	required_component_set = "combat_computers"
 	
 	build_block_radius = @build_block_radius_military
+
+	potential_construction = {
+		is_scope_type = starbase
+		OR = {
+			has_starbase_size >= starbase_starhold
+			has_starbase_size >= orbital_ring_tier_3
+		}
+	}
 
 	resources = {
 		category = ships

@@ -1,6 +1,8 @@
 # mwuv military ship rewrite
 # just adjust some values (hp, tier etc)
 
+# Last Modified: Version Game 3.6 Mod 1.12
+
 
 
 # tiers
@@ -27,7 +29,7 @@ tech_titan_build_speed = {
 
 	modifier = {
 		# custom_tooltip = tech_titan_build_speed_effect
-		ship_titan_cost_mult = -0.05
+		ship_titan_cost_mult = -0.05 # ignore error but this might not work
 		shipsize_titan_build_speed_mult = 0.25
 		# shipsize_offspring_titan_build_speed_mult = 0.25 # there is no such thing?
 	}
@@ -63,6 +65,9 @@ tech_titan_build_speed = {
 ## battleship_hp = 4000 hull_add = 2000 for each
 ## titan_hp = 8000 hull_add = 4000 for each
 
+## 3.6 rework
+## mult 0.1 for all classes
+
 tech_corvette_hull_1 = {
 	cost = @tier1cost3
 	area = engineering
@@ -72,9 +77,10 @@ tech_corvette_hull_1 = {
 	weight = @tier1weight3
 
 	modifier = {
-		# custom_tooltip = tech_corvette_hull_effect
-		shipsize_corvette_hull_add = 250 # 100
-		shipsize_offspring_corvette_hull_add = 250 # 100 should it be changed?
+		custom_tooltip = tech_corvette_hull_effect
+		shipsize_corvette_hull_mult = 0.1
+		shipsize_offspring_corvette_hull_mult = 0.1
+		shipsize_frigate_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -109,8 +115,9 @@ tech_corvette_hull_2 = {
 
 	modifier = {
 		# custom_tooltip = tech_corvette_hull_effect
-		shipsize_corvette_hull_add = 250 # 100
-		shipsize_offspring_corvette_hull_add = 250 # 100
+		shipsize_corvette_hull_mult = 0.1
+		shipsize_offspring_corvette_hull_mult = 0.1
+		shipsize_frigate_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -172,9 +179,9 @@ tech_destroyer_hull_1 = {
 	weight = @tier2weight3
 
 	modifier = {
-		# custom_tooltip = tech_destroyer_hull_effect
-		shipsize_destroyer_hull_add = 500 # 200
-		shipsize_offspring_destroyer_hull_add = 500 # 200
+		# custom_tooltip = tech_destroyer_build_speed_effect
+		shipsize_destroyer_hull_mult = 0.1
+		shipsize_offspring_destroyer_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -213,8 +220,8 @@ tech_destroyer_hull_2 = {
 
 	modifier = {
 		# custom_tooltip = tech_destroyer_hull_effect
-		shipsize_destroyer_hull_add = 500 # 200
-		shipsize_offspring_destroyer_hull_add = 500 # 200
+		shipsize_destroyer_hull_mult = 0.1
+		shipsize_offspring_destroyer_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -281,8 +288,8 @@ tech_cruiser_hull_1 = {
 
 	modifier = {
 		# custom_tooltip = tech_cruiser_hull_effect
-		shipsize_cruiser_hull_add = 500
-		shipsize_offspring_cruiser_hull_add = 500
+		shipsize_cruiser_hull_mult = 0.1
+		shipsize_offspring_cruiser_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -321,8 +328,8 @@ tech_cruiser_hull_2 = {
 
 	modifier = {
 		# custom_tooltip = tech_cruiser_hull_effect
-		shipsize_cruiser_hull_add = 500
-		shipsize_offspring_cruiser_hull_add = 500
+		shipsize_cruiser_hull_mult = 0.1
+		shipsize_offspring_cruiser_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -389,8 +396,8 @@ tech_battleship_hull_1 = {
 
 	modifier = {
 		custom_tooltip = tech_battleship_hull_effect
-		shipsize_battleship_hull_add = 2000 # 800
-		shipsize_offspring_battleship_hull_add = 2000 # 800
+		shipsize_battleship_hull_mult = 0.1
+		shipsize_offspring_battleship_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -429,8 +436,8 @@ tech_battleship_hull_2 = {
 
 	modifier = {
 		custom_tooltip = tech_battleship_hull_effect
-		shipsize_battleship_hull_add = 2000 # 800
-		shipsize_offspring_battleship_hull_add = 2000 # 800
+		shipsize_battleship_hull_mult = 0.1
+		shipsize_offspring_battleship_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -497,7 +504,7 @@ tech_titan_hull_1 = {
 	weight = @tier5weight3
 
 	modifier = {
-		shipsize_titan_hull_add = 4000 # 2000
+		shipsize_titan_hull_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -564,7 +571,7 @@ tech_titan_hull_2 = {
 	weight = @tier6weight3
 
 	modifier = {
-		shipsize_titan_hull_add = 4000 # 2000
+		shipsize_titan_hull_mult = 0.1
 	}
 
 	weight_modifier = {

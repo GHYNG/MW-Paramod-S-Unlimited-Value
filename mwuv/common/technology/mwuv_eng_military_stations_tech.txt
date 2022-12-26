@@ -1,12 +1,13 @@
 # MW Mod for defense platforms
 # Since Version Game 2.6 Mod 1.9.1
-# Last Modified Version Game 3.4 Mod 1.10.3
+# Modified Version Game 3.4 Mod 1.10.3
+# Last Modified Version Game 3.6 Mod 1.12
 
 # defense platforms for medium and large sizes
 
 ## small defense station
 tech_space_defense_station_1 = {
-	cost = @tier1cost1
+	cost = 0 # @tier1cost1
 	tier = 1
 	area = engineering
 	start_tech = yes
@@ -49,6 +50,10 @@ tech_space_defense_station_3 = {
 
 # small defense station buff
 
+@station_small_hp_add = 1500
+@station_medium_hp_add = 3000
+@station_large_hp_add = 6000
+
 tech_defense_platform_1_hull_1 = {
 	cost = @tier2cost2
 	area = engineering
@@ -86,7 +91,7 @@ tech_defense_platform_1_hull_1 = {
 	}
 
 	modifier = {
-		shipsize_military_station_small_hull_add = 1000
+		shipsize_military_station_small_hull_add = @station_small_hp_add
 	}
 }
 
@@ -127,7 +132,7 @@ tech_defense_platform_1_hull_2 = {
 	}
 
 	modifier = {
-		shipsize_military_station_small_hull_add = 1000
+		shipsize_military_station_small_hull_add = @station_small_hp_add
 	}
 }
 
@@ -172,7 +177,7 @@ tech_defense_platform_2_hull_1 = {
 	}
 
 	modifier = {
-		shipsize_military_station_medium_hull_add = 2000
+		shipsize_military_station_medium_hull_add = @station_medium_hp_add
 	}
 }
 
@@ -213,7 +218,7 @@ tech_defense_platform_2_hull_2 = {
 	}
 
 	modifier = {
-		shipsize_military_station_medium_hull_add = 2000
+		shipsize_military_station_medium_hull_add = @station_medium_hp_add
 	}
 }
 
@@ -258,7 +263,7 @@ tech_defense_platform_3_hull_1 = {
 	}
 
 	modifier = {
-		shipsize_military_station_large_hull_add = 4000
+		shipsize_military_station_large_hull_add = @station_large_hp_add
 	}
 }
 
@@ -299,7 +304,7 @@ tech_defense_platform_3_hull_2 = {
 	}
 
 	modifier = {
-		shipsize_military_station_large_hull_add = 4000
+		shipsize_military_station_large_hull_add = @station_large_hp_add
 	}
 }
 

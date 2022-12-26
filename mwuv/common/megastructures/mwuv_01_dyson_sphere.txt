@@ -1,3 +1,7 @@
+# MW Re-modified version
+# Last Modified: 3.8 (2022/12/13)
+# 	Modify Reason: fix miner issue
+
 #Dyson Sphere Site
 dyson_sphere_0 = {
 	entity = "construction_platform_entity"
@@ -46,15 +50,13 @@ dyson_sphere_0 = {
 			fail_text = "requires_no_habitable_planets"
 			NOT = {
 				any_system_planet = {
-					AND = {
-						colonizable_planet = yes
-					}
+					colonizable_planet = yes
 				}
 			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_black_hole_neutron_star_pulsar"
-			NOT = {
+			NOR = {
 				is_star_class = sc_black_hole
 				is_star_class = sc_neutron_star
 				is_star_class = sc_pulsar

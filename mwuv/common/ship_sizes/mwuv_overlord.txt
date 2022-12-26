@@ -12,9 +12,16 @@
 @corvette_collision_radius = 1 # 2
 @corvette_formation_priority = 50 # 20
 
-@corvette_hp = 500 # 300
+@corvette_hp = 300 # 200
 @corvette_evasion = 80 # 60
 @corvette_build_time = 60
+
+@frigate_hp = 400
+@frigate_evasion = 40
+@frigate_build_time = 90
+
+@frigate_collision_radius = 2 # 3
+@frigate_formation_priority = 50 # 25
 
 @corvette_upkeep_energy = 0.3
 @corvette_upkeep_alloys = 0.1
@@ -26,7 +33,7 @@
 @destroyer_collision_radius = 2 #
 @destroyer_formation_priority = 40 #
 
-@destroyer_hp = 1000 # 800
+@destroyer_hp = 600 # 600
 @destroyer_evasion = 40 # 35
 @destroyer_build_time = 120
 
@@ -40,7 +47,7 @@
 @cruiser_collision_radius = 4 # 3.5
 @cruiser_formation_priority = 30 # 30
 
-@cruiser_hp = 2000 # 1800
+@cruiser_hp = 1200 # 1800
 @cruiser_evasion = 20 # 10
 @cruiser_build_time = 240
 
@@ -54,7 +61,7 @@
 @battleship_collision_radius = 6 # 6
 @battleship_formation_priority = 20 # 50
 
-@battleship_hp = 4000 # 4000
+@battleship_hp = 2400 # 3000
 @battleship_evasion = 10 # 5
 @battleship_build_time = 480
 
@@ -68,7 +75,7 @@
 @titan_collision_radius = 12 # 12
 @titan_formation_priority = 10 # 40
 
-@titan_hp = 8000 # 10000
+@titan_hp = 4800 # 15000
 @titan_evasion = 5 # 5
 @titan_build_time = 960 # 1800
 
