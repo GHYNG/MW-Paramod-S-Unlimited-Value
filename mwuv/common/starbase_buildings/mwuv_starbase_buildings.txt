@@ -1,0 +1,304 @@
+# MWUV
+# Since version Game 3.9 Mod 2
+# Allows
+
+
+corvette_yards = {
+	icon = "GFX_spaceport_module_corvette_assembly_yard"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_corvettes
+		}
+	}
+
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			starbase_buildable_is_in_queue_before = {
+				first = shipyard
+				second = corvette_yards
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	custom_tooltip = sm_corvette_yards_desc_modifier
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_starbase = {
+					NOT = {
+						is_same_value = root
+					}
+					has_starbase_building = corvette_yards
+				}
+			}
+		}
+	}
+	station_modifier = {
+		shipsize_corvette_build_speed_mult = 0.5
+		shipsize_offspring_corvette_build_speed_mult = 0.5
+	}
+}
+
+destroyer_yards = {
+	icon = "GFX_spaceport_module_destroyer_assembly_yard"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_destroyers
+		}
+	}
+
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			starbase_buildable_is_in_queue_before = {
+				first = shipyard
+				second = destroyer_yards
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	custom_tooltip = sm_destroyer_yards_desc_modifier
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_starbase = {
+					NOT = {
+						is_same_value = root
+					}
+					has_starbase_building = destroyer_yards
+				}
+			}
+		}
+	}
+	station_modifier = {
+		shipsize_destroyer_build_speed_mult = 0.5
+		shipsize_offspring_destroyer_build_speed_mult = 0.5
+	}
+}
+
+cruiser_yards = {
+	icon = "GFX_spaceport_module_cruiser_assembly_yard"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_cruisers
+		}
+	}
+
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			starbase_buildable_is_in_queue_before = {
+				first = shipyard
+				second = cruiser_yards
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	custom_tooltip = sm_cruiser_yards_desc_modifier
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_starbase = {
+					NOT = {
+						is_same_value = root
+					}
+					has_starbase_building = cruiser_yards
+				}
+			}
+		}
+	}
+	station_modifier = {
+		shipsize_cruiser_build_speed_mult = 0.5
+		shipsize_offspring_cruiser_build_speed_mult = 0.5
+	}
+}
+
+battleship_yards = {
+	icon = "GFX_spaceport_module_battleship_assembly_yard"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_battleships
+		}
+	}
+
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			starbase_buildable_is_in_queue_before = {
+				first = shipyard
+				second = battleship_yards
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	custom_tooltip = sm_battleship_yards_desc_modifier
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_starbase = {
+					NOT = {
+						is_same_value = root
+					}
+					has_starbase_building = battleship_yards
+				}
+			}
+		}
+	}
+	station_modifier = {
+		shipsize_battleship_build_speed_mult = 0.5
+		shipsize_offspring_battleship_build_speed_mult = 0.5
+	}
+}
+
+titan_yards = {
+	icon = "GFX_spaceport_module_titan_assembly_yard"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_titans
+		}
+	}
+
+	possible = {
+		OR = {
+			has_starbase_module = shipyard
+			starbase_buildable_is_in_queue_before = {
+				first = shipyard
+				second = titan_yards
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	custom_tooltip = sm_titan_yards_desc_modifier
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			count_starbase_modules = {
+				type = shipyard
+				count < 2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_starbase = {
+					NOT = {
+						is_same_value = root
+					}
+					has_starbase_building = titan_yards
+				}
+			}
+		}
+	}
+	station_modifier = {
+		shipsize_titan_build_speed_mult = 0.5
+		shipsize_offspring_titan_build_speed_mult = 0.5
+	}
+}

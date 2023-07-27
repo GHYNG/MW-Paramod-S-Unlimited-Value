@@ -117,6 +117,17 @@ corvette = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = swarm
+	ship_roles = {
+		screen gunship artillery brawler
+	}
+	triggered_ship_roles = {
+		{
+			name = brawler_stealth
+			trigger = {
+				has_technology = tech_cloaking_1
+			}
+		}
+	}
 
 	prerequisites = { "tech_corvettes" }
 
@@ -239,6 +250,17 @@ destroyer = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = picket
+	ship_roles = {
+		screen gunship artillery brawler
+	}
+	triggered_ship_roles = {
+		{
+			name = artillery_stealth
+			trigger = {
+				has_technology = tech_cloaking_2
+			}
+		}
+	}
 
 	prerequisites = { "tech_destroyers" }
 
@@ -297,6 +319,42 @@ cruiser = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = line
+	ship_roles = {
+		gunship artillery carrier
+	}
+	triggered_ship_roles = {
+		{
+			name = explosive
+			trigger = {
+				has_technology = tech_torpedoes_1
+			}
+		}
+		{
+			name = explosive_stealth
+			trigger = {
+				has_technology = tech_cloaking_3
+			}
+		}
+		{
+			name = energy_torpedoes
+			trigger = {
+				has_technology = tech_energy_torpedoes_1
+			}
+		}
+		{
+			name = energy_torpedoes_stealth
+			trigger = {
+				has_technology = tech_cloaking_3
+				has_technology = tech_energy_torpedoes_1
+			}
+		}
+		{
+			name = artillery_stealth
+			trigger = {
+				has_technology = tech_cloaking_3
+			}
+		}
+	}
 
 	prerequisites = { "tech_cruisers" }
 
@@ -355,7 +413,10 @@ battleship = {
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
-	default_behavior = line
+	default_behavior = artillery
+	ship_roles = {
+		artillery carrier gunship
+	}
 
 	prerequisites = { "tech_battleships" }
 
@@ -415,6 +476,9 @@ titan = {
 	selectable = { host_has_dlc = "Apocalypse" }
 
 	default_behavior = artillery
+	ship_roles = {
+		artillery gunship
+	}
 
 	prerequisites = { "tech_titans" }
 
@@ -428,56 +492,6 @@ titan = {
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	required_component_set = "ship_aura_components"
-
-	potential_construction = {
-		OR = {
-			is_scope_type = starbase
-			AND = {
-				is_scope_type = megastructure
-				OR = {
-					is_megastructure_type = mega_shipyard_3
-					is_megastructure_type = mega_shipyard_restored
-				}
-			}
-		}
-	}
-
-	possible_construction = {
-		custom_tooltip = {
-			fail_text = starbase_citadel_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_size >= starbase_citadel
-				}
-#				is_ship_size = enclave_mercenary_station
-			}
-		}
-		custom_tooltip = {
-			fail_text = starbase_titan_yards_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_building = titan_yards
-				}
-#				is_ship_size = enclave_mercenary_station
-			}
-		}
-	}
 
 	resources = {
 		category = ships

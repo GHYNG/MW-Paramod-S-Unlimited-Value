@@ -1,0 +1,15 @@
+fotd_unified_stance = {
+	shipsize_corvette_build_speed_mult = 0.10
+	shipsize_destroyer_build_speed_mult = 0.10
+	shipsize_cruiser_build_speed_mult = 0.10
+	shipsize_battleship_build_speed_mult = 0.10
+	shipsize_titan_build_speed_mult = 0.10
+}
+
+fotd_unified_purpose = {
+	shipsize_corvette_build_speed_mult = 0.10
+	shipsize_destroyer_build_speed_mult = 0.10
+	shipsize_cruiser_build_speed_mult = 0.10
+	shipsize_battleship_build_speed_mult = 0.10
+	shipsize_titan_build_speed_mult = 0.10
+}

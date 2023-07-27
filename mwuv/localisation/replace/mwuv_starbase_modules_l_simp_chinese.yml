@@ -1,0 +1,22 @@
+﻿l_simp_chinese: 
+  
+  # Ship Yards
+  sm_titan_yards_desc:0 "安装在恒星基地外的专用干船坞让我们能够更快地建造恢弘的泰坦级战舰。\n"
+  sm_titan_yards_desc_modifier:0 "船坞：§Y建造泰坦加速§!"
+
+  sm_corvette_yards_desc:0 "安装在恒星基地外的专用干船坞让我们能够更快地建造护卫级战舰。\n"
+  sm_corvette_yards_desc_modifier:0 "船坞：§Y建造护卫舰加速§!"
+
+  sm_destroyer_yards_desc:0 "安装在恒星基地外的专用干船坞让我们能够更快地建造驱逐级战舰。\n"
+  sm_destroyer_yards_desc_modifier:0 "船坞：§Y建造驱逐舰加速§!"
+
+  sm_cruiser_yards_desc:0 "安装在恒星基地外的专用干船坞让我们能够更快地建造巡洋级战舰。\n"
+  sm_cruiser_yards_desc_modifier:0 "船坞：§Y建造巡洋舰加速§!"
+
+  sm_battleship_yards_desc:0 "安装在恒星基地外的专用干船坞让我们能够更快地建造战列级战舰。\n"
+  sm_battleship_yards_desc_modifier:0 "船坞：§Y建造战列舰加速§!"
+
+  sm_corvette_yards:0 "$sm_corvette_assembly_yards$"
+  sm_destroyer_yards:0 "$sm_destroyer_assembly_yards$"
+  sm_cruiser_yards:0 "$sm_cruiser_assembly_yards$"
+  sm_battleship_yards:0 "$sm_battleship_assembly_yards$"

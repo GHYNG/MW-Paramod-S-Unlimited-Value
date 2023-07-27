@@ -79,6 +79,7 @@ military_station_medium = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
+	max_hitpoints = @station_medium_hp
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
@@ -87,7 +88,7 @@ military_station_medium = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30	
 	}
-	max_hitpoints = @station_medium_hp
+	combat_size_multiplier = 4
 	size_multiplier = 2
 	fleet_slot_size = 4
 	section_slots = { 
@@ -134,12 +135,15 @@ military_station_medium = {
 	#	planet_mult = 2
 	#	system_mult = 0.5
 	# }
+
+	# use_shipnames_from = military_station_small
 }
 
 military_station_large = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
+	max_hitpoints = @station_large_hp
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
@@ -148,7 +152,7 @@ military_station_large = {
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30	
 	}
-	max_hitpoints = @station_large_hp
+	combat_size_multiplier = 8
 	size_multiplier = 4
 	fleet_slot_size = 8
 	section_slots = { 
@@ -197,4 +201,6 @@ military_station_large = {
 	#	planet_mult = 1
 	#	system_mult = 0.25
 	# }
+
+	# use_shipnames_from = military_station_small
 }

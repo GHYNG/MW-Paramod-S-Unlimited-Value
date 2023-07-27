@@ -1,0 +1,22 @@
+﻿l_english: 
+  
+  # Ship Yards
+  sm_titan_yards_desc:0 "Specialized drydocks erected on the Starbase's hull allow for the faster construction of gargantuan Titan-class ships.\n"
+  sm_titan_yards_desc_modifier:0 "Shipyards: §YTitan Construction Speed Up§!"
+
+  sm_corvette_yards_desc:0 "Specialized drydocks erected on the Starbase's hull allow for the faster construction of Corvette-class ships.\n"
+  sm_corvette_yards_desc_modifier:0 "Shipyards: §YCorvette Construction Speed Up§!"
+
+  sm_destroyer_yards_desc:0 "Specialized drydocks erected on the Starbase's hull allow for the faster construction of Sestroyer-class ships.\n"
+  sm_destroyer_yards_desc_modifier:0 "Shipyards: §YDestroyer Construction Speed Up§!"
+
+  sm_cruiser_yards_desc:0 "Specialized drydocks erected on the Starbase's hull allow for the faster construction of Cruiser-class ships.\n"
+  sm_cruiser_yards_desc_modifier:0 "Shipyards: §YCruiser Construction Speed Up§!"
+
+  sm_battleship_yards_desc:0 "Specialized drydocks erected on the Starbase's hull allow for the faster construction of Battleship-class ships.\n"
+  sm_battleship_yards_desc_modifier:0 "Shipyards: §YBattleship Construction Speed Up§!"
+
+  sm_corvette_yards:0 "$sm_corvette_assembly_yards$"
+  sm_destroyer_yards:0 "$sm_destroyer_assembly_yards$"
+  sm_cruiser_yards:0 "$sm_cruiser_assembly_yards$"
+  sm_battleship_yards:0 "$sm_battleship_assembly_yards$"

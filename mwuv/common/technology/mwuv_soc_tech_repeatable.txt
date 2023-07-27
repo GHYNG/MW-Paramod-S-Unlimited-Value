@@ -56,7 +56,7 @@ tech_repeatable_command_limit = {
 	}
 
 	modifier = {
-		country_command_limit_add = 10
+		command_limit_add = 10
 	}
 }
 
