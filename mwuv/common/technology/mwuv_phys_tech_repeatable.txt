@@ -7,7 +7,6 @@ tech_repeatable_reduced_building_cost = {
 	tier = @repeatableTechTier
 	category = { computing }
 	levels = -1
-	prerequisites = { "tech_physics_2" }
 	weight = @repeatableTechWeight
 
 	weight_modifier = {

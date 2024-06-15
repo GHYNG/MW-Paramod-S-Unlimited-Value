@@ -1,19 +1,13 @@
-##########
-# OPINION MODIFIERS
-##########
+# MWUV Opinion Modifiers for Interstellar Assembly
 
-# Destroyed Caravaneer Tradestation
-opinion_destroyed_caravaneer_home = {
-	opinion = {
-		base = 40
-	}
+# Opinion Modifiers for Interstellar Assembly
+# 1: Interstellar Assembly 1
+# 2: Interstellar Assembly 2
+# 3: Interstellar Assembly 3
+# 4: Interstellar Assembly 4
+# 5: Interstellar Assembly Restored
 
-	max = 100
-
-	decay = {
-		base = -1
-	}
-}
+# It appears that the opinion modifiers are DUPL, which means that the vanilla modifier will also appear in the game.
 
 triggered_opinion_of_interstellar_assembly_1 = {
 	trigger = {
@@ -24,7 +18,7 @@ triggered_opinion_of_interstellar_assembly_1 = {
 		}
 	}
 	opinion = {
-		base = 0
+		base = -15
 		add = value:mwuv_interstellar_assembly_opinion_value_1
 	}
 }
@@ -38,7 +32,7 @@ triggered_opinion_of_interstellar_assembly_2 = {
 		}
 	}
 	opinion = {
-		base = 0
+		base = -30
 		add = value:mwuv_interstellar_assembly_opinion_value_2
 	}
 }
@@ -52,7 +46,7 @@ triggered_opinion_of_interstellar_assembly_3 = {
 		}
 	}
 	opinion = {
-		base = 0
+		base = -75
 		add = value:mwuv_interstellar_assembly_opinion_value_2
 	}
 }
@@ -69,7 +63,7 @@ triggered_opinion_of_interstellar_assembly_4 = {
 		}
 	}
 	opinion = {
-		base = 0
+		base = -150
 		add = value:mwuv_interstellar_assembly_opinion_value_4
 		add = value:mwuv_interstellar_assembly_opinion_value_restored
 	}

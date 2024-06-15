@@ -1,3 +1,4 @@
 ﻿l_english:
  
- mod_shipsize_titan_build_speed_mult:0 "Titan Build Speed"
+ mod_shipsize_titan_build_speed_mult: "Titan Build Speed"
+ shipsize_offspring_titan_build_speed_mult: "Offspring Titan Build Speed"

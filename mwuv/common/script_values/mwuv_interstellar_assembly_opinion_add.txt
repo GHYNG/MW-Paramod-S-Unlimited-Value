@@ -9,7 +9,7 @@ mwuv_interstellar_assembly_opinion_value_1 = {
 				is_megastructure_type = interstellar_assembly_1
 			}
 		}
-		mult = 10
+		mult = 15
 	}
 }
 
@@ -24,7 +24,7 @@ mwuv_interstellar_assembly_opinion_value_2 = {
 				is_megastructure_type = interstellar_assembly_2
 			}
 		}
-		mult = 20
+		mult = 30
 	}
 }
 
@@ -39,7 +39,7 @@ mwuv_interstellar_assembly_opinion_value_3 = {
 				is_megastructure_type = interstellar_assembly_3
 			}
 		}
-		mult = 30
+		mult = 75
 	}
 }
 
@@ -54,7 +54,7 @@ mwuv_interstellar_assembly_opinion_value_4 = {
 				is_megastructure_type = interstellar_assembly_4
 			}
 		}
-		mult = 50
+		mult = 150
 	}
 }
 
@@ -69,6 +69,6 @@ mwuv_interstellar_assembly_opinion_value_restored = {
 				is_megastructure_type = interstellar_assembly_restored
 			}
 		}
-		mult = 50
+		mult = 150
 	}
 }

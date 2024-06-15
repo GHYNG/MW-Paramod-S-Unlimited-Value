@@ -1,0 +1,3 @@
+NInterface = {
+	MAX_NUM_SAVE_GAMES = 10000
+}

@@ -1,3 +1,4 @@
 ﻿l_simp_chinese:
  
- mod_shipsize_titan_build_speed_mult:0 "泰坦建造速度"
+ mod_shipsize_titan_build_speed_mult: "泰坦建造速度"
+ shipsize_offspring_titan_build_speed_mult: "子嗣泰坦建造速度"

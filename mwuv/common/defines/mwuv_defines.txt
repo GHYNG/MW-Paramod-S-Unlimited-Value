@@ -18,8 +18,3 @@ NGameplay = {
 		STARBASE_CAPACITY_MAX									= 99999999	# Max value of Starbase Capacity
 		STARBASE_CAPACITY_BASE 									= 3			# Base value of Starbase Capacity
 }
-
-NInterface = {
-	# Game save limit
-		MAX_NUM_SAVE_GAMES										= 1000
-}
