@@ -1,0 +1,44 @@
+arc_furnace_tooltip = {
+	custom_tooltip = {
+		success_text = arc_furnace_system_tt
+
+		exists = from
+		from = {
+			has_technology = tech_orbital_arc_furnace
+			# check_variable = { # removes upper limit for the tooltip
+			# 	which = arc_furnace_counter
+			# 	value < value:arc_furnace_limit
+			# }
+		}
+
+		NOT = {
+			has_star_flag = dyson_sphere_construction
+			any_system_megastructure = {
+				OR = {
+					is_megastructure_type = dyson_sphere_0
+					is_megastructure_type = dyson_sphere_1
+					is_megastructure_type = dyson_sphere_2
+					is_megastructure_type = dyson_sphere_3
+					is_megastructure_type = dyson_sphere_4
+					is_megastructure_type = dyson_sphere_5
+					is_megastructure_type = dyson_sphere_ruined
+					is_megastructure_type = dyson_sphere_restored
+					is_megastructure_type = orbital_arc_furnace_1
+					is_megastructure_type = orbital_arc_furnace_2
+					is_megastructure_type = orbital_arc_furnace_3
+					is_megastructure_type = orbital_arc_furnace_4
+					is_megastructure_type = orbital_arc_furnace_destroyed
+					is_megastructure_type = orbital_arc_furnace_restored
+				}
+			}
+		}
+		any_system_planet = {
+			NOR = {
+				has_anomaly = yes
+				has_planet_flag = megastructure
+				has_planet_flag = has_megastructure
+			}
+			is_planet_class = pc_molten
+		}
+	}
+}
