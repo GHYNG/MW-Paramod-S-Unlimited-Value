@@ -5,9 +5,10 @@
 # Updated for Game 3.6 Mod 1.12
 # 	Add support for new ship class: Frigate
 #	Rebalanced values due to vanilla changes
-# Last Modified Version Game 3.6 Mod 1.12
+# Updated for Game 3.6 Mod 1.12
+# Last Updated Version Game 4.0 Mod 2.3
 
-# medium and large defanse platform require technology
+# medium and large defense platform require technology
 # ship resize
 # titan building limit removal
 
@@ -90,6 +91,18 @@
 @titan_upkeep_energy = 4.8
 @titan_upkeep_alloys = 1.6
 
+##################
+# LOGISTICS
+##################
+
+@logistics_e = 0.1
+@logistics_d = 0.2
+@logistics_c = 0.4
+@logistics_b = 0.8
+@logistics_t = 1.6
+
+
+
 ############
 # STANDARD #
 ############
@@ -103,7 +116,7 @@ corvette = {
 	max_hitpoints = @corvette_hp
 	modifier = {
 		ship_evasion_add = @corvette_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	fleet_slot_size = 2
@@ -116,10 +129,8 @@ corvette = {
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
-	default_behavior = swarm
-	ship_roles = {
-		screen gunship artillery brawler
-	}
+	role_background = "GFX_role_selection_corvette"
+	ship_roles = { screen gunship artillery brawler }
 	triggered_ship_roles = {
 		{
 			name = brawler_stealth
@@ -128,6 +139,8 @@ corvette = {
 			}
 		}
 	}
+
+	default_behavior = swarm
 
 	prerequisites = { "tech_corvettes" }
 
@@ -146,6 +159,9 @@ corvette = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
+		}
+		logistics = {
+			trade = @corvette_logistic_upkeep_trade
 		}
 	}
 
@@ -174,7 +190,7 @@ frigate = {
 	max_hitpoints = @frigate_hp
 	modifier = {
 		ship_evasion_add = @frigate_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	hull_scale = 1.25
@@ -192,7 +208,19 @@ frigate = {
 	default_behavior = torpedo
 	ship_roles = { explosive artillery }
 
-	prerequisites = { "tech_corvettes" "tech_torpedoes_1" }
+	role_background = "GFX_role_selection_frigate"
+	ship_roles = { explosive }
+	triggered_ship_roles = {
+		{
+			name = explosive_stealth
+			trigger = { has_technology = tech_cloaking_1 }
+		}
+		{
+			name = energy_torpedoes
+			trigger = { has_technology = tech_energy_torpedoes_1 }
+		}
+	}
+	prerequisites = { "tech_torpedoes_1" }
 
 	combat_disengage_chance = 1.00
 
@@ -209,6 +237,10 @@ frigate = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
+		}
+
+		logistics = {
+			trade = @frigate_logistic_upkeep_trade
 		}
 	}
 
@@ -236,7 +268,7 @@ destroyer = {
 	max_hitpoints = @destroyer_hp
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
-		ship_piracy_suppression_add = 8
+		#ship_piracy_suppression_add = 8
 	}
 	size_multiplier = 2
 	fleet_slot_size = 3
@@ -250,9 +282,9 @@ destroyer = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = picket
-	ship_roles = {
-		screen gunship artillery brawler
-	}
+
+	role_background = "GFX_role_selection_destroyer"
+	ship_roles = { screen gunship artillery brawler }
 	triggered_ship_roles = {
 		{
 			name = artillery_stealth
@@ -280,6 +312,9 @@ destroyer = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
 		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
+		}
 	}
 	min_upgrade_cost = {
 		alloys = 2
@@ -305,7 +340,7 @@ cruiser = {
 	max_hitpoints = @cruiser_hp
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		ship_piracy_suppression_add = 6
+		#ship_piracy_suppression_add = 6
 	}
 	size_multiplier = 4
 	fleet_slot_size = 4
@@ -319,9 +354,9 @@ cruiser = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 
 	default_behavior = line
-	ship_roles = {
-		gunship artillery carrier
-	}
+
+	role_background = "GFX_role_selection_cruiser"
+	ship_roles = { gunship artillery carrier }
 	triggered_ship_roles = {
 		{
 			name = explosive
@@ -374,6 +409,9 @@ cruiser = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
 		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -400,7 +438,7 @@ battleship = {
 	max_hitpoints = @battleship_hp
 	modifier = {
 		ship_evasion_add = @battleship_evasion
-		ship_piracy_suppression_add = 4
+		#ship_piracy_suppression_add = 4
 	}
 	size_multiplier = 8
 	fleet_slot_size = 5
@@ -417,6 +455,9 @@ battleship = {
 	ship_roles = {
 		artillery carrier gunship
 	}
+
+	role_background = "GFX_role_selection_battleship"
+	ship_roles = { artillery carrier gunship }
 
 	prerequisites = { "tech_battleships" }
 
@@ -435,6 +476,9 @@ battleship = {
 		upkeep = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
+		}
+		logistics = {
+			trade = @battleship_logistic_upkeep_trade
 		}
 	}
 
@@ -480,6 +524,9 @@ titan = {
 		artillery gunship
 	}
 
+	role_background = "GFX_role_selection_titan"
+	ship_roles = { artillery gunship }
+
 	prerequisites = { "tech_titans" }
 
 	combat_disengage_chance = 1.25
@@ -494,10 +541,13 @@ titan = {
 	required_component_set = "ship_aura_components"
 
 	resources = {
-		category = ships
+		category = ships # Titans and offspring titans uses mw_military_ships in common/economic_categories to apply cost modifiers
 		upkeep = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
+		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
 		}
 	}
 

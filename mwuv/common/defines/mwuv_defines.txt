@@ -13,7 +13,7 @@ NGameplay = {
 	# Fleet overall size limiters 
 		NAVAL_CAPACITY_MAX										= 99999999	# Max value of Naval Capacity
 		NAVAL_CAPACITY_BASE 									= 20		# Base value of Naval Capacity
-		NAVAL_CAPACITY_POP_MULT									= 0.1
+		NAVAL_CAPACITY_POP_MULT									= 0.001
 	# Starbase number limiters 
 		STARBASE_CAPACITY_MAX									= 99999999	# Max value of Starbase Capacity
 		STARBASE_CAPACITY_BASE 									= 3			# Base value of Starbase Capacity

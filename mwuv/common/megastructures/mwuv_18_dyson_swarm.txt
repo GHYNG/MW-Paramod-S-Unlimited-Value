@@ -17,8 +17,27 @@ dyson_swarm_1 = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 500
 			unity = 1000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 500
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 500
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -27,6 +46,7 @@ dyson_swarm_1 = {
 	}
 
 	construction_blocks_and_blocked_by = none
+	custom_tooltip_requirements = "MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_DYSON_SWARM"
 
 	dismantle_cost = {
 		category = megastructures
@@ -61,9 +81,17 @@ dyson_swarm_1 = {
 				alloys = 500
 				mult = modifier:megastructure_dismantle_refund_mult
 			}
-			change_variable = {
-				which = dyson_swarm_counter
-				value = -1
+			if = {
+				limit = {
+					check_variable = {
+						which = dyson_swarm_counter
+						value >= 1
+					}
+				}
+				change_variable = {
+					which = dyson_swarm_counter
+					value = -1
+				}
 			}
 		}
 	}
@@ -118,6 +146,20 @@ dyson_swarm_1 = {
 				is_star_class = sc_black_hole
 				is_star_class = sc_neutron_star
 				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			NOT = {
+				OR = {
+					has_megastructure = dyson_sphere_0
+					has_megastructure = dyson_sphere_1
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5
+					has_megastructure = dyson_swarm_1
+					has_megastructure = dyson_swarm_2
+					has_megastructure = dyson_swarm_3
+				}
 			}
 		}
 		# Removes build cap.
@@ -196,9 +238,17 @@ dyson_swarm_1 = {
 	}
 	on_build_cancel = {
 		from = {
-			change_variable = {
-				which = dyson_swarm_counter
-				value = -1
+			if = {
+				limit = {
+					check_variable = {
+						which = dyson_swarm_counter
+						value >= 1
+					}
+				}
+				change_variable = {
+					which = dyson_swarm_counter
+					value = -1
+				}
 			}
 		}
 	}

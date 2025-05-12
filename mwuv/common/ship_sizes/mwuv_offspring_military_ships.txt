@@ -484,7 +484,7 @@ offspring_titan = {
 	required_component_set = "ship_aura_components"
 
 	resources = {
-		category = ships
+		category = mwuv_ships
 		cost = {
 			alloys = 480
 		}

@@ -16,11 +16,33 @@ dyson_sphere_0 = {
 			alloys = 5000
 			unity = 1000
 		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 5000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 5000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 5000
+			mult = @halved_alloy_to_food_cost_ratio
+		}
 
 		upkeep = {
 			energy = 5
 		}
 	}
+
+	custom_tooltip_requirements = "MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_DYSON_SPHERE"
 
 	prerequisites = { "tech_dyson_sphere" }
 
@@ -30,11 +52,11 @@ dyson_sphere_0 = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
 		}
-#		MWUV-mod: allows more than 1 dyson sphere per empire
-#		custom_tooltip = {
-#			fail_text = "requires_no_existing_dyson_sphere"
-#			from = { NOT = { has_country_flag = built_dyson_sphere } }
-#		}
+		#		MWUV-mod: allows more than 1 dyson sphere per empire
+		#		custom_tooltip = {
+		#			fail_text = "requires_no_existing_dyson_sphere"
+		#			from = { NOT = { has_country_flag = built_dyson_sphere } }
+		#		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
 			NOT = {
@@ -51,6 +73,22 @@ dyson_sphere_0 = {
 			NOT = {
 				any_system_planet = {
 					colonizable_planet = yes
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "blocked_by_pre_ftl_policy"
+			if = {
+				limit = {
+					any_system_planet = {
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+					}
+				}
+				from = {
+					has_policy_flag = interference_aggressive
 				}
 			}
 		}
@@ -85,6 +123,11 @@ dyson_sphere_0 = {
 			fail_text = "requires_no_existing_megastructure"
 			#NOT = { has_any_megastructure = yes }
 			has_no_non_gate_megastructure = yes
+			NOT = {
+				any_system_planet = {
+					is_planet_class = pc_cosmogenesis_world
+				}
+			}
 		}
 	}
 
@@ -139,6 +182,170 @@ dyson_sphere_0 = {
 				orbital_station = {
 					dismantle = yes
 				}
+			}
+		}
+	}
+}
+
+dyson_sphere_2 = {
+	entity = "dyson_sphere_phase_02_entity"
+	construction_entity = "dyson_sphere_part_1_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 3600
+	use_planet_resource = yes
+	possible = {
+		# MWUV-MOD Version 4.0 Mod 2.3:
+		# Remove build cap for dyson_sphere_2
+		# custom_tooltip = {
+		# 	fail_text = "requires_no_existing_dyson_sphere"
+		# 	from = {
+		# 		OR = {
+		# 			has_relic = r_contingency_core
+		# 			NOT = { has_country_flag = built_dyson_sphere_swarm }
+		# 		}
+		# 	}
+		# }
+		# custom_tooltip = {
+		# 	fail_text = "requires_no_existing_dyson_sphere_two"
+		# 	from = {
+		# 		NOT = { has_country_flag = built_dyson_sphere_contingency_swarm } }
+		# }
+		custom_tooltip = {
+			fail_text = "requires_no_arc_furnace"
+			system_has_arc_furnace = no
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_arc_furnace_construction"
+			if = {
+				limit = {
+					system_has_arc_furnace = no
+				}
+				NOT = {
+					solar_system = {
+						has_star_flag = arc_furnace_construction
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_colonies"
+			NOT = {
+				any_system_planet = {
+					OR = {
+						#has_colony_progress > 0 # TODO: [AUG-51261] Replace with pop count check
+						is_colony = yes
+					}
+					is_artificial = no
+					exists = owner
+					owner = {
+						is_primitive = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "blocked_by_pre_ftl_policy"
+			if = {
+				limit = {
+					any_system_planet = {
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+					}
+				}
+				from = {
+					has_policy_flag = interference_aggressive
+				}
+			}
+		}
+	}
+	resources = {
+		category = megastructures
+		cost = {
+			unity = 5000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 10000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 10000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 10000
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+
+		produces = {
+			energy = 1000
+		}
+	}
+
+	upgrade_from = {
+		dyson_sphere_1
+		dyson_swarm_3
+	}
+
+	prerequisites = { "tech_dyson_sphere" }
+
+	on_build_start = {
+		set_star_flag = dyson_sphere_construction
+		from = {
+			if = {
+				limit = {
+					NOR = {
+						has_country_flag = build_dyson_sphere_swarm
+						has_country_flag = built_dyson_sphere_contingency_swarm
+					}
+				}
+				if = {
+					limit = {
+						has_relic = r_contingency_core
+						has_country_flag = built_dyson_sphere_swarm
+					}
+					set_country_flag = built_dyson_sphere_contingency_swarm
+				}
+				set_country_flag = built_dyson_sphere_swarm
+			}
+		}
+	}
+
+	on_build_cancel = {
+		remove_star_flag = dyson_sphere_construction
+	}
+
+	on_build_complete = {
+		remove_star_flag = dyson_sphere_construction
+		remove_system_terraforming_candidates = yes
+		from = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = swarm_counter_decreased }
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = dyson_swarm_counter
+							value >= 1
+						}
+					}
+					change_variable = {
+						which = dyson_swarm_counter
+						value = -1
+					}
+					set_country_flag = swarm_counter_decreased
+				}
+				set_country_flag = swarm_counter_decreased
 			}
 		}
 	}

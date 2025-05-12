@@ -1,0 +1,4 @@
+max_science_ships = {
+	base = 1
+	add = value:count_leaders_of_class|CLASS|scientist|
+}

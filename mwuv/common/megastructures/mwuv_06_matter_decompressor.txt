@@ -14,6 +14,26 @@ matter_decompressor_0 = {
 			alloys = 5000
 			unity = 5000
 		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 5000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 5000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 5000
+			mult = @halved_alloy_to_food_cost_ratio
+		}
 
 		upkeep = {
 			energy = 5
@@ -27,7 +47,9 @@ matter_decompressor_0 = {
 	}
 
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -55,28 +77,33 @@ matter_decompressor_0 = {
 			fail_text = "requires_black_hole"
 			is_star_class = sc_black_hole
 		}
-#		mwuv-mod: allows multiple matter decoms per empire
-#		custom_tooltip = {
-#			fail_text = "requires_no_existing_matter_decompressor"
-#			from = {
-#				NOT = {
-#					any_owned_megastructure = {
-#						OR = {
-#							is_megastructure_type = matter_decompressor_0
-#							is_megastructure_type = matter_decompressor_1
-#							is_megastructure_type = matter_decompressor_2
-#							is_megastructure_type = matter_decompressor_3
-#							is_megastructure_type = matter_decompressor_4
-#							#is_megastructure_type = matter_decompressor_restored
-#						}
-#					}
-#				}
-#			}
-#		}
+		#		mwuv-mod: allows multiple matter decoms per empire
+		#		custom_tooltip = {
+		#			fail_text = "requires_no_existing_matter_decompressor"
+		#			from = {
+		#				NOT = {
+		#					any_owned_megastructure = {
+		#						OR = {
+		#							is_megastructure_type = matter_decompressor_0
+		#							is_megastructure_type = matter_decompressor_1
+		#							is_megastructure_type = matter_decompressor_2
+		#							is_megastructure_type = matter_decompressor_3
+		#							is_megastructure_type = matter_decompressor_4
+		#							#is_megastructure_type = matter_decompressor_restored
+		#						}
+		#					}
+		#				}
+		#			}
+		#		}
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			#NOT = { has_any_megastructure = yes }
 			has_no_non_gate_megastructure = yes
+			NOT = {
+				any_system_planet = {
+					is_planet_class = pc_cosmogenesis_world
+				}
+			}
 		}
 	}
 
@@ -121,7 +148,7 @@ matter_decompressor_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			has_any_megastructure = yes

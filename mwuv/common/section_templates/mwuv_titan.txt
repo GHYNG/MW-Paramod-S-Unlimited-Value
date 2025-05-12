@@ -1,14 +1,16 @@
-# MWUV
-# Unlocks Offspring Titans
-# Since version game 3.8 mod 2
+# This file is rewritten to apply cost modifiers to titans.
+# Economy categories for sections changed from `ship_sections` to `mwuv_ship_sections`
+# Since version:
+
+
 
 @section_cost = 160
 
 #BOW
 
 ship_section_template = {
-	key = "OFFSPRING_TITAN_BOW"
-	ship_size = offspring_titan
+	key = "TITAN_BOW"
+	ship_size = titan
 	fits_on_slot = bow
 	should_draw_components = yes
 	entity = "titan_bow_entity"
@@ -35,7 +37,7 @@ ship_section_template = {
 	large_utility_slots = 6
 
 	resources = {
-		category = ship_sections
+		category = mwuv_ship_sections
 		cost = {
 			alloys = @section_cost
 		}
@@ -43,8 +45,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "OFFSPRING_TITAN_MID"
-	ship_size = offspring_titan
+	key = "TITAN_MID"
+	ship_size = titan
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "titan_mid_entity"
@@ -75,7 +77,7 @@ ship_section_template = {
 	large_utility_slots = 6
 
 	resources = {
-		category = ship_sections
+		category = mwuv_ship_sections
 		cost = {
 			alloys = @section_cost
 		}
@@ -85,8 +87,8 @@ ship_section_template = {
 #STERN
 
 ship_section_template = {
-	key = "OFFSPRING_TITAN_STERN"
-	ship_size = offspring_titan
+	key = "TITAN_STERN"
+	ship_size = titan
 	fits_on_slot = stern
 	should_draw_components = yes
 	entity = "titan_stern_entity"
@@ -107,7 +109,7 @@ ship_section_template = {
 	aux_utility_slots = 3
 
 	resources = {
-		category = ship_sections
+		category = mwuv_ship_sections
 		cost = {
 			alloys = @section_cost
 		}

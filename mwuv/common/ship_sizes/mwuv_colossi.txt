@@ -90,6 +90,9 @@ colossus = {
 			energy = @colossus_upkeep_energy
 			alloys = @colossus_upkeep_alloys
 		}
+		logistics = {
+			trade = @colossus_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {

@@ -1,7 +1,8 @@
 # mw unlimited values
 # this is for unlocking military stations
 
-# Last Updated for Game 3.6 Mod 1.12
+# Updated for Game 3.6 Mod 1.12
+# Updated for Game 4.0 Mod 2.3
 
 
 #####################
@@ -16,6 +17,8 @@
 @station_medium_build_time = 120
 @station_large_build_time = 240
 
+@build_block_radius_military = 200
+
 military_station_small = {
 	max_speed = 6
 	rotation_speed = 10
@@ -24,15 +27,15 @@ military_station_small = {
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
-		ship_piracy_suppression_add = 2
+		#ship_piracy_suppression_add = 2
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30
-	}	
+	}
 	combat_size_multiplier = 2
 	size_multiplier = 1
 	fleet_slot_size = 2
-	section_slots = { 
+	section_slots = {
 		"west" = { locator = "part1" }
 		"east" = { locator = "part2" }
 	}
@@ -43,17 +46,18 @@ military_station_small = {
 	is_space_station = yes
 	base_buildtime = @station_small_build_time
 
+	role_background = "GFX_role_selection_defense_platform"
 	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
-	
+
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_1" }
 	class = shipclass_military_station
 	construction_type = starbase_defenses
-	
+
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
-	
+
 	build_block_radius = @build_block_radius_military
 
 	potential_construction = {
@@ -61,13 +65,16 @@ military_station_small = {
 		OR = {
 			has_starbase_size >= starbase_outpost
 			has_starbase_size >= orbital_ring_tier_1
+			has_starbase_size >= starbase_deep_space_citadel_1
 		}
 	}
 
 	resources = {
 		category = ships
 	}
-	
+
+	available_to_everyone = yes
+
 	# ai_ship_data = {
 	# 	min = 4
 	#	planet_mult = 4
@@ -83,15 +90,15 @@ military_station_medium = {
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
-		ship_piracy_suppression_add = 4
+		# ship_piracy_suppression_add = 4
 	}
 	ship_modifier = {
-		ship_weapon_range_mult = 0.30	
+		ship_weapon_range_mult = 0.30
 	}
 	combat_size_multiplier = 4
 	size_multiplier = 2
 	fleet_slot_size = 4
-	section_slots = { 
+	section_slots = {
 		"north" = { locator = "part1" }
 		"west" = { locator = "part2" }
 		"east" = { locator = "part3" }
@@ -104,18 +111,19 @@ military_station_medium = {
 	is_space_station = yes
 	base_buildtime = @station_medium_build_time
 
+	role_background = "GFX_role_selection_defense_platform"
 	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
-	
+
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_2" }
 	class = shipclass_military_station
 	construction_type = starbase_defenses
-	
+
 	required_component_set = "power_core"
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
-	
+
 	build_block_radius = @build_block_radius_military
 
 	potential_construction = {
@@ -123,13 +131,16 @@ military_station_medium = {
 		OR = {
 			has_starbase_size >= starbase_starport
 			has_starbase_size >= orbital_ring_tier_2
+			has_starbase_size >= starbase_deep_space_citadel_1
 		}
 	}
 
 	resources = {
-		category = ships
+		category = mwuv_ships
 	}
-	
+
+	available_to_everyone = yes
+
 	# ai_ship_data = {
 	# 	min = 2
 	#	planet_mult = 2
@@ -147,15 +158,15 @@ military_station_large = {
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
-		ship_piracy_suppression_add = 8
+		# ship_piracy_suppression_add = 8
 	}
 	ship_modifier = {
-		ship_weapon_range_mult = 0.30	
+		ship_weapon_range_mult = 0.30
 	}
 	combat_size_multiplier = 8
 	size_multiplier = 4
 	fleet_slot_size = 8
-	section_slots = { 
+	section_slots = {
 		"north" = { locator = "part1" locator = "part2" }
 		"west" = { locator = "part3" locator = "part4" }
 		"east" = { locator = "part5" locator = "part6" }
@@ -168,20 +179,21 @@ military_station_large = {
 	is_space_station = yes
 	base_buildtime = @station_large_build_time
 
+	role_background = "GFX_role_selection_defense_platform"
 	ship_roles = { gunship screen artillery carrier energy_torpedoes } # ignore error? because it was in vanille file
-	
+
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_space_defense_station_3" }
 	class = shipclass_military_station
 	construction_type = starbase_defenses
-	
+
 	required_component_set = "power_core"
 	required_component_set = "power_core"
 	required_component_set = "power_core"
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
-	
+
 	build_block_radius = @build_block_radius_military
 
 	potential_construction = {
@@ -189,13 +201,16 @@ military_station_large = {
 		OR = {
 			has_starbase_size >= starbase_starhold
 			has_starbase_size >= orbital_ring_tier_3
+			has_starbase_size >= starbase_deep_space_citadel_1
 		}
 	}
 
 	resources = {
-		category = ships
+		category = mwuv_ships
 	}
-	
+
+	available_to_everyone = yes
+
 	# ai_ship_data = {
 	#	min = 1
 	#	planet_mult = 1

@@ -3,6 +3,7 @@
  # titan build speed
  tech_titan_build_speed:0 "标准化泰坦模板"
  tech_titan_build_speed_desc:0 "建立新的泰坦模板和建造标准将会大大提高生产线的效率。"
+ tech_titan_build_speed_effect: "$mod_ship_titan_cost_mult$：§G-5%§!\n$mod_shipsize_titan_build_speed_mult$：§G+25%§!"
  
  
  

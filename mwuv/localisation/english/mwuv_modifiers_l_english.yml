@@ -1,4 +1,11 @@
 ﻿l_english:
  
  mod_shipsize_titan_build_speed_mult: "Titan Build Speed"
- shipsize_offspring_titan_build_speed_mult: "Offspring Titan Build Speed"
+ mod_shipsize_offspring_titan_build_speed_mult: "Offspring Titan Build Speed"
+
+ mod_shipsize_offspring_titan_hull_add: "Offspring Titan Hull Points"
+ mod_shipsize_offspring_titan_hull_mult: "$mod_shipsize_offspring_titan_hull_add$"
+
+ mod_ship_titan_cost_mult: "Titan Build Cost"
+
+ mod_shipclass_military_station_cost_mult: "Defense Station Build Cost"

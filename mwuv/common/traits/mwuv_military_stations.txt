@@ -1,0 +1,103 @@
+########
+# MWUV #
+########
+
+# Since Game 3.11 Mod 2.1
+# 	Add buff for medium and large military stations
+# Update Game 4.0 Mod 2.3
+#	Add real support and update vanilla api for military stations for small, medium, large.
+
+trait_ruler_fortifier = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_fortifier
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		starbase_upgrade_cost_mult = -0.075
+		shipclass_military_station_cost_mult = -0.075
+		shipclass_starbase_hull_mult = 0.05
+		shipclass_military_station_hull_mult = 0.05
+	}
+	leader_potential_add = {
+		OR = {
+			has_paragon_dlc = no
+			has_trait = subclass_commander_councilor
+		}
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		inline_script = paragon/subclass_free_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+trait_ruler_fortifier_2 = {
+	leader_trait_type = veteran
+	replace_traits = { trait_ruler_fortifier }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_fortifier
+		RARITY = free_or_veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		starbase_upgrade_cost_mult = -0.10
+		shipclass_military_station_cost_mult = -0.10
+		shipclass_military_station_build_cost_mult = -0.1
+		shipclass_starbase_hull_mult = 0.10
+		shipclass_military_station_hull_mult = 0.10
+	}
+	leader_class = { commander }
+}
+
+leader_trait_border_guard = {
+	leader_trait_type = veteran
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_home_in_the_sky
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 1
+	}
+	councilor_modifier = {
+		shipclass_military_station_build_speed_mult = 0.15
+		shipclass_starbase_damage_mult = 0.2
+		shipclass_starbase_hull_mult = 0.25
+	}
+	leader_potential_add = {
+		has_paragon_dlc = yes
+		has_trait = subclass_commander_councilor
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = @subclass_trait_weight
+		inline_script = paragon/council_weight_mult
+	}
+}
+
+leader_trait_border_guard_2 = {
+	leader_trait_type = veteran
+	replace_traits = { leader_trait_border_guard }
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_home_in_the_sky
+		RARITY = veteran
+		COUNCIL = yes
+		TIER = 2
+	}
+	councilor_modifier = {
+		shipclass_military_station_build_speed_mult = 0.3
+		shipclass_starbase_damage_mult = 0.3
+		shipclass_starbase_hull_mult = 0.35
+	}
+	leader_class = { commander }
+}

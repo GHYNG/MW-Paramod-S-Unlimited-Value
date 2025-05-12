@@ -9,8 +9,27 @@ mega_shipyard_0 = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 3000
 			unity = 2500
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 3000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 3000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 3000
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -21,15 +40,17 @@ mega_shipyard_0 = {
 	prerequisites = { "tech_mega_shipyard" }
 
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
 		}
-#		custom_tooltip = {
-#			fail_text = "requires_no_existing_megastructure"
-#			from = { NOT = { has_country_flag = built_mega_shipyard_site } }
-#		}
+		#		custom_tooltip = {
+		#			fail_text = "requires_no_existing_megastructure"
+		#			from = { NOT = { has_country_flag = built_mega_shipyard_site } }
+		#		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
 			NOT = {
@@ -125,7 +146,7 @@ mega_shipyard_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			from = {
@@ -139,7 +160,7 @@ mega_shipyard_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			has_no_non_gate_megastructure = yes

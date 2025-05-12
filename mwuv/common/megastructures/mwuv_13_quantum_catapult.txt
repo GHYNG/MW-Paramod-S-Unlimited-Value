@@ -9,19 +9,43 @@ quantum_catapult_0 = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 5000
+			alloys = 2000
 			influence = 300
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 2000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 2000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 2000
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
-			energy = 5
+			energy = 25
 		}
 	}
 
-	prerequisites = { "tech_quantum_catapult" "tech_mega_engineering" }
+	custom_tooltip_requirements = "MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_QUANTUM_CATAPULT"
+
+	prerequisites = { "tech_quantum_catapult" }
 
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -42,10 +66,10 @@ quantum_catapult_0 = {
 				}
 			}
 		}
-#		custom_tooltip = {
-#			fail_text = "requires_no_existing_quantum_catapult"
-#			from = { NOT = { has_country_flag = built_quantum_catapult_site } }
-#		}
+		#		custom_tooltip = {
+		#			fail_text = "requires_no_existing_quantum_catapult"
+		#			from = { NOT = { has_country_flag = built_quantum_catapult_site } }
+		#		}
 	}
 
 	placement_rules = {
@@ -74,24 +98,6 @@ quantum_catapult_0 = {
 					}
 				}
 			}
-			custom_tooltip = {
-				fail_text = "requires_no_existing_megastructure"
-				#can_build_megastructure_on_planet = yes
-				NOR = {
-					has_planet_flag = megastructure
-					has_planet_flag = has_megastructure
-					solar_system = {
-						has_star_flag = ring_world_built
-					}
-					is_planet_class = pc_ringworld_habitable
-					is_planet_class = pc_ringworld_habitable_damaged
-					is_planet_class = pc_ringworld_tech
-					is_planet_class = pc_ringworld_tech_damaged
-					is_planet_class = pc_ringworld_seam
-					is_planet_class = pc_ringworld_seam_damaged
-					is_planet_class = pc_habitat
-				}
-			}
 		}
 	}
 
@@ -114,24 +120,34 @@ quantum_catapult_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0
 			from = {
-				OR = {
-					has_megastructure = quantum_catapult_0
-					has_megastructure = quantum_catapult_1
-					has_megastructure = quantum_catapult_2
-					has_megastructure = quantum_catapult_3
-					has_megastructure = quantum_catapult_ruined
-					has_megastructure = quantum_catapult_restored
-					has_megastructure = quantum_catapult_ruined_slingshot
-					has_megastructure = quantum_catapult_restored_slingshot
-					has_megastructure = quantum_catapult_improved_slingshot
+				any_system_within_border = {
+					distance = {
+						source = root.solar_system
+						use_bypasses = no
+						min_jumps = 1
+						max_jumps = 25
+					}
+					any_system_megastructure = {
+						OR = {
+							is_megastructure_type = quantum_catapult_0
+							is_megastructure_type = quantum_catapult_1
+							is_megastructure_type = quantum_catapult_2
+							is_megastructure_type = quantum_catapult_3
+							is_megastructure_type = quantum_catapult_ruined
+							is_megastructure_type = quantum_catapult_restored
+							is_megastructure_type = quantum_catapult_ruined_slingshot
+							is_megastructure_type = quantum_catapult_restored_slingshot
+							is_megastructure_type = quantum_catapult_improved_slingshot
+						}
+					}
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			has_any_megastructure = yes
@@ -142,8 +158,20 @@ quantum_catapult_0 = {
 	on_build_cancel = {}
 	on_build_complete = {
 		from = {
-			set_country_flag = built_quantum_catapult_site
-			country_event = { id = tutorial.2126 }
+			if = {
+				limit = {
+					has_relic = r_contingency_core
+					has_country_flag = built_quantum_catapult_site
+				}
+				set_country_flag = built_quantum_catapult_site_contingency
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = built_quantum_catapult_site }
+				}
+				set_country_flag = built_quantum_catapult_site
+				country_event = { id = tutorial.2126 }
+			}
 		}
 		fromfrom.planet = {
 			if = {
@@ -152,9 +180,6 @@ quantum_catapult_0 = {
 					dismantle = yes
 				}
 			}
-		}
-		fromfrom.planet = {
-			set_planet_flag = has_megastructure
 		}
 	}
 }

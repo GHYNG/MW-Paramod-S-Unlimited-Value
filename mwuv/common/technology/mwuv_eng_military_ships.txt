@@ -27,9 +27,13 @@ tech_titan_build_speed = {
 	prerequisites = { "tech_titans" }
 	weight = @tier5weight2
 
+	potential = {
+		country_uses_bio_ships = no
+	}
+
 	modifier = {
-		# custom_tooltip = tech_titan_build_speed_effect
-		shipsize_titan_build_cost_mult = -0.05 # ignore error but this might not work
+		custom_tooltip = tech_titan_build_speed_effect
+		ship_titan_cost_mult = -0.05
 		shipsize_titan_build_speed_mult = 0.25
 		shipsize_offspring_titan_build_speed_mult = 0.25 # there is no such thing?
 	}
@@ -57,7 +61,7 @@ tech_corvette_hull_1 = {
 	weight = @tier1weight3
 
 	modifier = {
-		custom_tooltip = tech_corvette_hull_effect
+		# custom_tooltip = tech_corvette_hull_effect
 		shipsize_corvette_hull_mult = 0.1
 		shipsize_offspring_corvette_hull_mult = 0.1
 		shipsize_frigate_hull_mult = 0.1
@@ -152,7 +156,7 @@ tech_battleship_hull_1 = {
 	weight = @tier4weight3
 
 	modifier = {
-		custom_tooltip = tech_battleship_hull_effect
+		# custom_tooltip = tech_battleship_hull_effect
 		shipsize_battleship_hull_mult = 0.1
 		shipsize_offspring_battleship_hull_mult = 0.1
 	}
@@ -168,7 +172,7 @@ tech_battleship_hull_2 = {
 	weight = @tier5weight3
 
 	modifier = {
-		custom_tooltip = tech_battleship_hull_effect
+		# custom_tooltip = tech_battleship_hull_effect
 		shipsize_battleship_hull_mult = 0.1
 		shipsize_offspring_battleship_hull_mult = 0.1
 	}
@@ -185,6 +189,7 @@ tech_titan_hull_1 = {
 
 	modifier = {
 		shipsize_titan_hull_mult = 0.1
+		shipsize_offspring_titan_hull_mult = 0.1
 	}
 }
 
@@ -199,5 +204,6 @@ tech_titan_hull_2 = {
 
 	modifier = {
 		shipsize_titan_hull_mult = 0.1
+		shipsize_offspring_titan_hull_mult = 0.1
 	}
 }

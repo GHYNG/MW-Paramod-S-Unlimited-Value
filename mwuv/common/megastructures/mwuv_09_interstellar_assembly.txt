@@ -9,8 +9,27 @@ interstellar_assembly_0 = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 5000
 			unity = 2500
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = no
+			}
+			alloys = 5000
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			alloys = 5000
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				country_uses_bio_ships = yes
+			}
+			food = 5000
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -21,7 +40,9 @@ interstellar_assembly_0 = {
 	prerequisites = { "tech_interstellar_assembly" }
 
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -42,10 +63,10 @@ interstellar_assembly_0 = {
 				}
 			}
 		}
-#		custom_tooltip = {
-#			fail_text = "requires_no_existing_interstellar_assembly"
-#			from = { NOT = { has_country_flag = built_interstellar_assembly_site } }
-#		}
+		#		custom_tooltip = {
+		#			fail_text = "requires_no_existing_interstellar_assembly"
+		#			from = { NOT = { has_country_flag = built_interstellar_assembly_site } }
+		#		}
 		#custom_tooltip = {
 		#	fail_text = "requires_capital_system"
 		#	from.capital_scope.solar_system = { is_same_value = root }
@@ -78,26 +99,16 @@ interstellar_assembly_0 = {
 				is_star = no
 			}
 			custom_tooltip = {
+				fail_text = "requires_not_astral_scar"
+				is_astral_scar = no
+			}
+			custom_tooltip = {
 				fail_text = "requires_not_ring_world"
 				is_ringworld = no
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				#can_build_megastructure_on_planet = yes
-				NOR = {
-					has_planet_flag = megastructure
-					has_planet_flag = has_megastructure
-					solar_system = {
-						has_star_flag = ring_world_built
-					}
-					is_planet_class = pc_ringworld_habitable
-					is_planet_class = pc_ringworld_habitable_damaged
-					is_planet_class = pc_ringworld_tech
-					is_planet_class = pc_ringworld_tech_damaged
-					is_planet_class = pc_ringworld_seam
-					is_planet_class = pc_ringworld_seam_damaged
-					is_planet_class = pc_habitat
-				}
+				NOT = { has_planet_flag = megastructure }
 			}
 		}
 	}
@@ -121,7 +132,7 @@ interstellar_assembly_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			from = {
@@ -136,7 +147,7 @@ interstellar_assembly_0 = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			factor = 0.1
 			has_any_megastructure = yes
@@ -146,9 +157,15 @@ interstellar_assembly_0 = {
 	on_build_start = {}
 	on_build_cancel = {}
 	on_build_complete = {
-		from = { set_country_flag = built_interstellar_assembly_site }
-		fromfrom.planet = {
-			set_planet_flag = has_megastructure
+		from = {
+			if = {
+				limit = {
+					has_relic = r_contingency_core
+					has_country_flag = built_mega_shipyard_site
+				}
+				set_country_flag = built_interstellar_assembly_site_contingency
+			}
+			set_country_flag = built_interstellar_assembly_site
 		}
 	}
 }

@@ -9,62 +9,65 @@
 
 # It appears that the opinion modifiers are DUPL, which means that the vanilla modifier will also appear in the game.
 
-triggered_opinion_of_interstellar_assembly_1 = {
-	trigger = {
-		FROM = {
-			any_owned_megastructure = {
-				is_megastructure_type = interstellar_assembly_1
-			}
-		}
-	}
-	opinion = {
-		base = -15
-		add = value:mwuv_interstellar_assembly_opinion_value_1
-	}
-}
+# Update Version Game 4.0 Mod 2.3
+#	It appears that the vanilla now allow multiple interstellar assemblies to stack their opinion modifiers.
 
-triggered_opinion_of_interstellar_assembly_2 = {
-	trigger = {
-		FROM = {
-			any_owned_megastructure = {
-				is_megastructure_type = interstellar_assembly_2
-			}
-		}
-	}
-	opinion = {
-		base = -30
-		add = value:mwuv_interstellar_assembly_opinion_value_2
-	}
-}
-
-triggered_opinion_of_interstellar_assembly_3 = {
-	trigger = {
-		FROM = {
-			any_owned_megastructure = {
-				is_megastructure_type = interstellar_assembly_3
-			}
-		}
-	}
-	opinion = {
-		base = -75
-		add = value:mwuv_interstellar_assembly_opinion_value_2
-	}
-}
-
-triggered_opinion_of_interstellar_assembly_4 = {
-	trigger = {
-		FROM = {
-			any_owned_megastructure = {
-				OR = {
-					is_megastructure_type = interstellar_assembly_4
-					is_megastructure_type = interstellar_assembly_restored
-				}
-			}
-		}
-	}
-	opinion = {
-		base = -150
-		add = value:mwuv_interstellar_assembly_opinion_value_4
-		add = value:mwuv_interstellar_assembly_opinion_value_restored
-	}
-}
+# triggered_opinion_of_interstellar_assembly_1 = {
+# 	trigger = {
+# 		FROM = {
+# 			any_owned_megastructure = {
+# 				is_megastructure_type = interstellar_assembly_1
+# 			}
+# 		}
+# 	}
+# 	opinion = {
+# 		base = -15
+# 		add = value:mwuv_interstellar_assembly_opinion_value_1
+# 	}
+# }
+#
+# triggered_opinion_of_interstellar_assembly_2 = {
+# 	trigger = {
+# 		FROM = {
+# 			any_owned_megastructure = {
+# 				is_megastructure_type = interstellar_assembly_2
+# 			}
+# 		}
+# 	}
+# 	opinion = {
+# 		base = -30
+# 		add = value:mwuv_interstellar_assembly_opinion_value_2
+# 	}
+# }
+#
+# triggered_opinion_of_interstellar_assembly_3 = {
+# 	trigger = {
+# 		FROM = {
+# 			any_owned_megastructure = {
+# 				is_megastructure_type = interstellar_assembly_3
+# 			}
+# 		}
+# 	}
+# 	opinion = {
+# 		base = -75
+# 		add = value:mwuv_interstellar_assembly_opinion_value_2
+# 	}
+# }
+#
+# triggered_opinion_of_interstellar_assembly_4 = {
+# 	trigger = {
+# 		FROM = {
+# 			any_owned_megastructure = {
+# 				OR = {
+# 					is_megastructure_type = interstellar_assembly_4
+# 					is_megastructure_type = interstellar_assembly_restored
+# 				}
+# 			}
+# 		}
+# 	}
+# 	opinion = {
+# 		base = -150
+# 		add = value:mwuv_interstellar_assembly_opinion_value_4
+# 		add = value:mwuv_interstellar_assembly_opinion_value_restored
+# 	}
+# }

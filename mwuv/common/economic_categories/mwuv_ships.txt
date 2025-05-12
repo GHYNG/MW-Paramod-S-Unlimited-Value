@@ -1,0 +1,108 @@
+# This file is added to apply unsupported modifiers in vanilla game.
+#
+# Currently, titans, offspring titans, medium and large military stations now
+# receive cost modifiers that were not supported in vanilla game.
+#
+# Since version: Game 4.0 Mod 2.3
+
+mwuv_ships = {
+	parent = ships
+	use_for_ai_budget = yes
+	generate_mult_modifiers = {
+		upkeep
+		logistics
+	}
+	modifier_category = ship
+
+	# Titans and offspring titans
+	triggered_cost_modifier = {
+		key = ship_titan
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			OR = {
+				is_ship_size = titan
+				is_ship_size = offspring_titan
+			}
+		}
+	}
+
+	# Military stations
+	# Small stations is already defined in vanilla file, so we don't have to repeat it here.
+	## Medium Stations
+	triggered_cost_modifier = {
+		key = ship_military_station_medium
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = military_station_medium
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_military_station_medium
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = military_station_medium
+		}
+	}
+	## Large Stations
+	triggered_cost_modifier = {
+		key = ship_military_station_large
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = military_station_large
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_military_station_large
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = military_station_large
+		}
+	}
+	## Stations in general
+	triggered_cost_modifier = {
+		key = shipclass_military_station
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_class = shipclass_military_station
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = shipclass_military_station
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_class = shipclass_military_station
+		}
+	}
+}
+
+mwuv_ship_sections = {
+	parent = mwuv_ships
+}

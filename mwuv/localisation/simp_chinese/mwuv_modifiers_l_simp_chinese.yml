@@ -1,4 +1,11 @@
 ﻿l_simp_chinese:
  
  mod_shipsize_titan_build_speed_mult: "泰坦建造速度"
- shipsize_offspring_titan_build_speed_mult: "子嗣泰坦建造速度"
+ mod_shipsize_offspring_titan_build_speed_mult: "子嗣泰坦建造速度"
+
+ mod_shipsize_offspring_titan_hull_add: "子嗣泰坦船体值"
+ mod_shipsize_offspring_titan_hull_mult: "$mod_shipsize_offspring_titan_hull_add$"
+
+ mod_ship_titan_cost_mult: "泰坦建造花费"
+
+ mod_shipclass_military_station_cost_mult: "防御平台建造花费"

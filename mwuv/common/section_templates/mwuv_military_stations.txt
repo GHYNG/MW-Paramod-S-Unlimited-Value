@@ -1,0 +1,778 @@
+##################################
+# MWUV Military Station Sections #
+# ################################
+#
+# Since Version Game 4.0 Game 2.3
+# 	Change economic categories for sections for military stations from `ship_sections` to `mwuv_ship_sections`
+
+@section_cost = 30
+@section_cost_for_large = 60
+
+ship_section_template = {
+	key = "LIGHT_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { gunship }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_light_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "small_gun_03"
+		is_side_slot = no
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "small_gun_04"
+		is_side_slot = no
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+}
+
+ship_section_template = {
+	key = "PD_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { screen }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_light_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "point_defence_turret"
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "point_defence_turret"
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "point_defence_turret"
+		locatorname = "small_gun_03"
+		is_side_slot = no
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "point_defence_turret"
+		locatorname = "small_gun_04"
+		is_side_slot = no
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+ship_section_template = {
+	key = "MEDIUM_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { gunship }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				is_preferred_weapons = weapon_type_energy
+				is_preferred_weapons = weapon_type_kinetic
+			}
+		}
+	}
+}
+
+ship_section_template = {
+	key = "MISSILE_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { explosive }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_torpedoes_1 }
+
+	ai_tags = { energy_torpedoes }
+
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "TORPEDO_02"
+		template = "medium_missile_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+}
+
+ship_section_template = {
+	key = "HEAVY_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { artillery }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_heavy_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+ship_section_template = {
+	key = "HANGAR_MILITARY_STATION_SECTION"
+	ship_size = military_station_small
+	ship_size = military_station_medium
+	ai_tags = { carrier }
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_hangar_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 10
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
+}
+
+
+
+# Large Military Stations
+
+ship_section_template = {
+	key = "LIGHT_LARGE_MILITARY_STATION_SECTION"
+	ship_size = military_station_large
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_light_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "point_defence_turret"
+		locatorname = "small_gun_01"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "point_defence_turret"
+		locatorname = "small_gun_03"
+		is_side_slot = no
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "small_gun_04"
+		is_side_slot = no
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+		section_instance = 1
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+		section_instance = 1
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_07"
+		template = "small_turret"
+		locatorname = "small_gun_03"
+		is_side_slot = no
+		section_instance = 1
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_08"
+		template = "small_turret"
+		locatorname = "small_gun_04"
+		is_side_slot = no
+		section_instance = 1
+	}
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+			mult = 2 # 2 times larger for large military stations
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+ship_section_template = {
+	key = "MEDIUM_LARGE_MILITARY_STATION_SECTION"
+	ship_size = military_station_large
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+		section_instance = 0
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+		section_instance = 1
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+		section_instance = 1
+	}
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+			mult = 2 # 2 times larger for large military stations
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+ship_section_template = {
+	key = "HEAVY_LARGE_MILITARY_STATION_SECTION"
+	ship_size = military_station_large
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_heavy_entity"
+	icon = "GFX_ship_part_core_mid"
+
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		section_instance = 1
+	}
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+			mult = 2 # 2 times larger for large military stations
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+ship_section_template = {
+	key = "HANGAR_LARGE_MILITARY_STATION_SECTION"
+	ship_size = military_station_large
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+	should_draw_components = yes
+
+	entity = "military_station_section_heavy_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+		section_instance = 0
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+		section_instance = 1
+	}
+
+	medium_utility_slots = 6
+	aux_utility_slots = 2
+
+	resources = {
+		category = mwuv_ship_sections
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @section_cost
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @section_cost
+			mult = 0.5
+			mult = 2 # 2 times larger for large military stations
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+			mult = 2 # 2 times larger for large military stations
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
