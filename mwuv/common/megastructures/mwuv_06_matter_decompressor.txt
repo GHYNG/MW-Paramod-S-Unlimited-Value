@@ -124,6 +124,7 @@ matter_decompressor_0 = {
 					has_planet_flag = megastructure
 					has_planet_flag = has_megastructure
 				}
+				# is_a_planet_megastructure = yes
 			}
 			is_star_class = sc_black_hole
 		}
@@ -149,10 +150,10 @@ matter_decompressor_0 = {
 			}
 		}
 
-		modifier = {
-			factor = 0.1
-			has_any_megastructure = yes
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	has_any_megastructure = yes
+		# }
 	}
 
 	on_build_start = {}

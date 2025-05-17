@@ -1,0 +1,14 @@
+mwuv_arc_furnace_ai_modifier_factor = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_system_megastructure
+		trigger_scope = FROM
+		mode = add
+		parameters = {
+			limit = {
+				mwuv_megastructure_is_arc_furnace = yes
+			}
+		}
+		mult = 1
+	}
+}

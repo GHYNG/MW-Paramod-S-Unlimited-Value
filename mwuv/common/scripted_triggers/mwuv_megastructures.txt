@@ -1,0 +1,72 @@
+# blocking megastructure would block the construction of other normal megastructures
+# an dyson sphere is a blocking megastruction
+# an grand archive is not
+# this is a logic refined from 00_scripted_triggers.txt/has_no_non_gate_megastructure
+mwuv_has_no_blocking_megastructure = {
+	OR = {
+		has_any_megastructure = no
+		NOT = {
+			has_star_flag = ring_world_built
+			any_system_megastructure = {
+				OR = {
+					is_megastructure_type = dyson_sphere_0
+					is_megastructure_type = dyson_sphere_1
+					is_megastructure_type = dyson_sphere_2
+					is_megastructure_type = dyson_sphere_3
+					is_megastructure_type = dyson_sphere_4
+					is_megastructure_type = dyson_sphere_5
+					is_megastructure_type = dyson_sphere_ruined
+					is_megastructure_type = dyson_sphere_restored
+
+					is_megastructure_type = ring_world_1
+					is_megastructure_type = ring_world_2_intermediate
+					is_megastructure_type = ring_world_2
+					is_megastructure_type = ring_world_3_intermediate
+					is_megastructure_type = ring_world_ruined
+					is_megastructure_type = ring_world_restored
+
+					is_megastructure_type = habitat_central_complex
+
+					is_megastructure_type = matter_decompressor_0
+					is_megastructure_type = matter_decompressor_1
+					is_megastructure_type = matter_decompressor_2
+					is_megastructure_type = matter_decompressor_3
+					is_megastructure_type = matter_decompressor_4
+					is_megastructure_type = matter_decompressor_ruined
+					is_megastructure_type = matter_decompressor_restored
+
+					is_megastructure_type = crisis_sphere_0
+					is_megastructure_type = crisis_sphere_1
+					is_megastructure_type = crisis_sphere_2
+					is_megastructure_type = crisis_sphere_3
+					is_megastructure_type = crisis_sphere_4
+
+					is_megastructure_type = dyson_swarm_1
+					is_megastructure_type = dyson_swarm_2
+					is_megastructure_type = dyson_swarm_3
+
+					is_megastructure_type = orbital_arc_furnace_1
+					is_megastructure_type = orbital_arc_furnace_2
+					is_megastructure_type = orbital_arc_furnace_3
+					is_megastructure_type = orbital_arc_furnace_4
+					is_megastructure_type = orbital_arc_furnace_restored
+					is_megastructure_type = orbital_arc_furnace_destroyed
+
+					is_megastructure_type = cosmogenesis_world_0
+				}
+			}
+		}
+	}
+}
+
+mwuv_megastructure_is_arc_furnace = {
+	# this = megastructure
+	OR = {
+		is_megastructure_type = orbital_arc_furnace_1
+		is_megastructure_type = orbital_arc_furnace_2
+		is_megastructure_type = orbital_arc_furnace_3
+		is_megastructure_type = orbital_arc_furnace_4
+		is_megastructure_type = orbital_arc_furnace_restored
+		is_megastructure_type = orbital_arc_furnace_destroyed
+	}
+}

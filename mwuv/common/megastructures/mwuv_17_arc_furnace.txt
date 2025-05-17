@@ -146,10 +146,11 @@ orbital_arc_furnace_1 = {
 				}
 			}
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace"
-			system_has_arc_furnace = no
-		}
+		# allows multiple arc furnace in one system
+		# custom_tooltip = {
+		# 	fail_text = "requires_no_arc_furnace"
+		# 	system_has_arc_furnace = no
+		# }
 		# Removes the build cap.
 		# custom_tooltip = {
 		# 	fail_text = "requires_less_than_x_arc_furnaces"
@@ -216,6 +217,13 @@ orbital_arc_furnace_1 = {
 				NOT = {
 					owner = { is_same_value = from }
 				}
+			}
+		}
+
+		modifier = {
+			factor = value:mwuv_arc_furnace_ai_modifier_factor
+			any_system_megastructure = {
+				mwuv_megastructure_is_arc_furnace = yes
 			}
 		}
 	}

@@ -53,7 +53,7 @@ spy_orb_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			#NOT = { has_any_megastructure = yes }
-			has_no_non_gate_megastructure = yes
+			mwuv_has_no_blocking_megastructure = yes
 		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
@@ -108,6 +108,7 @@ spy_orb_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
+				has_any_megastructure = no
 				NOT = { has_planet_flag = megastructure }
 			}
 		}
@@ -161,10 +162,10 @@ spy_orb_0 = {
 			}
 		}
 
-		modifier = {
-			factor = 0.1
-			has_any_megastructure = yes
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	has_any_megastructure = yes
+		# }
 	}
 
 	on_build_start = {}
